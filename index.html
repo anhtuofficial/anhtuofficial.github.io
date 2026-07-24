@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Anh Tư Official | Ca sĩ</title>
+
+<meta name="description" content="Website chính thức của ca sĩ Anh Tư">
+
+<meta name="theme-color" content="#000000">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+html{
+scroll-behavior:smooth;
+}
+
+
+body{
+
+background:#050505;
+color:white;
+
+font-family:Inter,sans-serif;
+
+}
+
+
+h1,h2,h3{
+
+font-family:"Cormorant Garamond",serif;
+
+}
+
+
+a{
+
+text-decoration:none;
+color:white;
+
+}
+
+
+img{
+
+width:100%;
+display:block;
+
+}
+
+
+
+/* HEADER */
+
+
+header{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+padding:25px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+z-index:99;
+
+background:
+linear-gradient(
+black,
+transparent
+);
+
+}
+
+
+
+.logo{
+
+font-size:35px;
+
+color:#d4af37;
+
+font-weight:bold;
+
+}
+
+
+
+nav{
+
+display:flex;
+
+gap:30px;
+
+}
+
+
+
+nav a{
+
+font-size:14px;
+
+letter-spacing:1px;
+
+}
+
+
+
+nav a:hover{
+
+color:#d4af37;
+
+}
+
+
+
+.menu{
+
+display:none;
+
+font-size:30px;
+
+}
+
+
+
+
+/* HERO */
+
+
+.hero{
+
+height:100vh;
+
+position:relative;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+}
+
+
+
+.hero img{
+
+position:absolute;
+
+inset:0;
+
+height:100%;
+
+object-fit:cover;
+
+filter:brightness(.35);
+
+}
+
+
+
+.hero-content{
+
+position:relative;
+
+z-index:2;
+
+}
+
+
+
+.hero h1{
+
+font-size:clamp(60px,12vw,130px);
+
+letter-spacing:8px;
+
+}
+
+
+
+.hero p{
+
+font-size:20px;
+
+letter-spacing:4px;
+
+margin:25px 0;
+
+}
+
+
+
+.btn{
+
+display:inline-block;
+
+padding:15px 35px;
+
+border:1px solid #d4af37;
+
+color:#d4af37;
+
+margin:10px;
+
+transition:.3s;
+
+}
+
+
+
+.btn:hover{
+
+background:#d4af37;
+
+color:#000;
+
+}
+
+
+
+
+
+/* SECTION */
+
+
+section{
+
+padding:100px 8%;
+
+}
+
+
+
+.title{
+
+text-align:center;
+
+font-size:60px;
+
+color:#d4af37;
+
+margin-bottom:50px;
+
+}
+
+
+
+
+/* ABOUT */
+
+
+.about{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:50px;
+
+align-items:center;
+
+}
+
+
+
+.about p{
+
+font-size:18px;
+
+line-height:2;
+
+color:#ccc;
+
+}
+
+
+
+/* ANIMATION */
+
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:1s;
+
+}
+
+
+.reveal.show{
+
+opacity:1;
+
+transform:none;
+
+}
+
+
+
+
+@media(max-width:800px){
+
+nav{
+
+display:none;
+
+}
+
+
+.menu{
+
+display:block;
+
+}
+
+
+.about{
+
+grid-template-columns:1fr;
+
+}
+
+
+}
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<header>
+
+
+<div class="logo">
+AT
+</div>
+
+
+
+<nav>
+
+<a href="#home">Trang chủ</a>
+
+<a href="#about">Giới thiệu</a>
+
+<a href="#album">Album</a>
+
+<a href="#music">Âm nhạc</a>
+
+<a href="#mv">MV</a>
+
+<a href="#gallery">Gallery</a>
+
+<a href="#news">Tin tức</a>
+
+<a href="#contact">Liên hệ</a>
+
+</nav>
+
+
+<div class="menu">
+☰
+</div>
+
+
+</header>
+
+
+
+
+
+<section class="hero" id="home">
+
+
+<img src="https://images.unsplash.com/photo-1506157786151-b8491531f063">
+
+
+<div class="hero-content">
+
+
+<h1>
+ANH TƯ
+</h1>
+
+
+<p>
+ÂM NHẠC • CẢM XÚC • HÀNH TRÌNH
+</p>
+
+
+
+<a class="btn" href="#music">
+NGHE NHẠC
+</a>
+
+
+<a class="btn" href="#mv">
+XEM MV
+</a>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section id="about">
+
+
+<h2 class="title reveal">
+Giới thiệu
+</h2>
+
+
+
+<div class="about reveal">
+
+
+<img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b">
+
+
+
+<p>
+
+Anh Tư là nghệ sĩ theo đuổi dòng nhạc giàu cảm xúc.
+Website chính thức lưu giữ hành trình nghệ thuật,
+các sản phẩm âm nhạc, hình ảnh sân khấu
+và những câu chuyện phía sau mỗi ca khúc.
+
+</p>
+
+
+
+</div>
+
+
+</section>
+<!-- =====================
+ALBUM
+===================== -->
+
+
+<section id="album">
+
+
+<h2 class="title reveal">
+Album
+</h2>
+
+
+
+<div class="grid reveal">
+
+
+<div class="box">
+
+<img src="https://images.unsplash.com/photo-1619983081563-430f63602796">
+
+<h3>
+Thanh Xuân
+</h3>
+
+<p>
+Album đầu tay
+</p>
+
+</div>
+
+
+
+
+<div class="box">
+
+<img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30">
+
+<h3>
+Chuyện Của Tôi
+</h3>
+
+<p>
+Single Collection
+</p>
+
+</div>
+
+
+
+
+<div class="box">
+
+<img src="https://images.unsplash.com/photo-1506157786151-b8491531f063">
+
+<h3>
+Live Concert
+</h3>
+
+<p>
+Sân khấu âm nhạc
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<style>
+
+
+.grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(3,1fr);
+
+gap:30px;
+
+}
+
+
+
+.box{
+
+background:#111;
+
+border-radius:15px;
+
+overflow:hidden;
+
+transition:.4s;
+
+}
+
+
+
+.box:hover{
+
+transform:translateY(-10px);
+
+}
+
+
+
+.box img{
+
+height:350px;
+
+object-fit:cover;
+
+}
+
+
+
+.box h3{
+
+font-size:35px;
+
+padding:20px 20px 5px;
+
+}
+
+
+
+.box p{
+
+padding:0 20px 25px;
+
+color:#aaa;
+
+}
+
+
+
+@media(max-width:800px){
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+
+</style>
+
+
+
+
+
+
+
+<!-- =====================
+MV
+===================== -->
+
+
+<section id="mv">
+
+
+<h2 class="title reveal">
+MV mới nhất
+</h2>
+
+
+
+<div class="grid reveal">
+
+
+<div class="box">
+
+
+<img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81">
+
+
+<h3>
+MV 01
+</h3>
+
+
+</div>
+
+
+
+
+<div class="box">
+
+
+<img src="https://images.unsplash.com/photo-1501612780327-45045538702b">
+
+
+<h3>
+MV 02
+</h3>
+
+
+</div>
+
+
+
+
+<div class="box">
+
+
+<img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f">
+
+
+<h3>
+MV 03
+</h3>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- =====================
+ÂM NHẠC
+===================== -->
+
+
+<section id="music">
+
+
+<h2 class="title reveal">
+Âm nhạc
+</h2>
+
+
+
+<div class="music reveal">
+
+
+<h3>
+Bài hát nổi bật
+</h3>
+
+
+
+<audio controls>
+
+<source src="music/song.mp3" type="audio/mp3">
+
+</audio>
+
+
+
+<ul>
+
+
+<li>
+Chỉ Còn Tình Yêu
+</li>
+
+
+<li>
+Sợ Yêu
+</li>
+
+
+<li>
+Ngôi Nhà Hạnh Phúc
+</li>
+
+
+</ul>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<style>
+
+
+.music{
+
+max-width:700px;
+
+margin:auto;
+
+background:#111;
+
+padding:40px;
+
+border-radius:20px;
+
+}
+
+
+
+.music audio{
+
+width:100%;
+
+margin:30px 0;
+
+}
+
+
+
+.music li{
+
+list-style:none;
+
+padding:15px;
+
+border-bottom:1px solid #333;
+
+}
+
+
+
+</style>
+
+
+
+
+
+
+
+
+<!-- =====================
+GALLERY
+===================== -->
+
+
+<section id="gallery">
+
+
+<h2 class="title reveal">
+
+Gallery
+
+</h2>
+
+
+
+<div class="gallery reveal">
+
+
+<img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a">
+
+
+<img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7">
+
+
+<img src="https://images.unsplash.com/photo-1503095396549-807759245b35">
+
+
+<img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f">
+
+
+<img src="https://images.unsplash.com/photo-1501612780327-45045538702b">
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<style>
+
+
+.gallery{
+
+columns:3;
+
+column-gap:20px;
+
+}
+
+
+
+.gallery img{
+
+margin-bottom:20px;
+
+border-radius:15px;
+
+}
+
+
+
+@media(max-width:800px){
+
+.gallery{
+
+columns:2;
+
+}
+
+}
+
+
+</style>
+<!-- =====================
+LỊCH DIỄN
+===================== -->
+
+
+<section id="shows">
+
+
+<h2 class="title reveal">
+Lịch diễn
+</h2>
+
+
+<div class="music reveal">
+
+
+<h3>
+15/08/2026
+</h3>
+
+<p>
+Nhà hát lớn Hà Nội
+</p>
+
+
+<br>
+
+
+<h3>
+30/08/2026
+</h3>
+
+<p>
+Đêm nhạc Acoustic
+</p>
+
+
+<br>
+
+
+<a class="btn" href="#">
+Đặt vé
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- =====================
+TIN TỨC
+===================== -->
+
+
+<section id="news">
+
+
+<h2 class="title reveal">
+Tin tức
+</h2>
+
+
+<div class="grid reveal">
+
+
+<div class="box">
+
+<img src="https://images.unsplash.com/photo-1503095396549-807759245b35">
+
+<h3>
+Hành trình âm nhạc mới
+</h3>
+
+<p>
+Cập nhật dự án, sân khấu và hoạt động nghệ thuật.
+</p>
+
+
+</div>
+
+
+
+<div class="box">
+
+<img src="https://images.unsplash.com/photo-1501612780327-45045538702b">
+
+<h3>
+Hậu trường MV
+</h3>
+
+<p>
+Những khoảnh khắc phía sau ánh đèn.
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- =====================
+FAN CLUB
+===================== -->
+
+
+<section id="fanclub">
+
+
+<h2 class="title reveal">
+Fan Club
+</h2>
+
+
+
+<div class="music reveal">
+
+
+<h3>
+Cộng đồng Anh Tư
+</h3>
+
+
+<p>
+
+Nơi kết nối những người yêu âm nhạc,
+chia sẻ hình ảnh, sản phẩm mới
+và các hoạt động của nghệ sĩ.
+
+</p>
+
+
+<br>
+
+
+<a class="btn" href="#">
+Tham gia
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- =====================
+CONTACT
+===================== -->
+
+
+<section id="contact">
+
+
+<h2 class="title reveal">
+Liên hệ
+</h2>
+
+
+
+<div class="music reveal">
+
+
+<input placeholder="Họ tên">
+
+
+<input placeholder="Email">
+
+
+<textarea placeholder="Nội dung"></textarea>
+
+
+
+<button>
+
+Gửi liên hệ
+
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<style>
+
+
+input,
+textarea{
+
+width:100%;
+
+padding:15px;
+
+margin:10px 0;
+
+background:#050505;
+
+border:1px solid #333;
+
+color:white;
+
+border-radius:8px;
+
+}
+
+
+
+textarea{
+
+height:120px;
+
+}
+
+
+
+button{
+
+padding:15px 40px;
+
+background:#d4af37;
+
+border:none;
+
+cursor:pointer;
+
+}
+
+
+
+
+footer{
+
+text-align:center;
+
+padding:50px;
+
+background:#000;
+
+color:#888;
+
+}
+
+
+</style>
+
+
+
+
+
+
+
+<footer>
+
+
+<h2 class="logo">
+AT
+</h2>
+
+
+<p>
+© 2026 Anh Tư Official
+</p>
+
+
+</footer>
+
+
+
+
+
+
+
+
+<script>
+
+
+// SCROLL ANIMATION
+
+
+const reveal =
+document.querySelectorAll(".reveal");
+
+
+
+function animation(){
+
+
+reveal.forEach(item=>{
+
+
+const top =
+item.getBoundingClientRect().top;
+
+
+
+if(top < window.innerHeight - 80){
+
+item.classList.add("show");
+
+}
+
+
+});
+
+
+}
+
+
+
+window.addEventListener(
+"scroll",
+animation
+);
+
+
+animation();
+
+
+
+
+
+
+// MOBILE MENU
+
+
+const menu =
+document.querySelector(".menu");
+
+
+const nav =
+document.querySelector("nav");
+
+
+
+menu.onclick=function(){
+
+
+if(nav.style.display==="flex"){
+
+
+nav.style.display="none";
+
+
+}
+
+else{
+
+
+nav.style.display="flex";
+
+nav.style.flexDirection="column";
+
+nav.style.position="absolute";
+
+nav.style.right="20px";
+
+nav.style.top="80px";
+
+nav.style.background="#000";
+
+nav.style.padding="30px";
+
+
+}
+
+
+};
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
