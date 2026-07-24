@@ -1,399 +1,1902 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anh Tư Singer | Official Artist Portfolio</title>
-    <!-- Font chữ nghệ thuật chuẩn tiếng Việt từ Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #070707;
-            --surface-color: #121212;
-            --gold: #dfb15b;
-            --gold-light: #fbeed7;
-            --text-main: #f1f1f1;
-            --text-muted: #9e9e9e;
-            --border-gold: rgba(223, 177, 91, 0.25);
-        }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        html {
-            scroll-behavior: smooth;
-        }
+<title>Anh Tư Official | Ca sĩ</title>
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
+<meta name="description" content="Website chính thức của ca sĩ Anh Tư. Âm nhạc, MV, album, lịch diễn và những câu chuyện nghệ thuật.">
 
-        h1, h2, h3, .logo {
-            font-family: 'Playfair Display', serif;
-        }
+<meta name="keywords" content="Anh Tư, ca sĩ, âm nhạc, MV, album">
 
-        /* Thanh điều hướng nghệ thuật */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(7, 7, 7, 0.85);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-gold);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 60px;
-            z-index: 1000;
-        }
+<meta name="author" content="Anh Tư Official">
 
-        .logo {
-            color: var(--gold);
-            font-size: 1.4rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 40px;
-        }
+<!-- Open Graph SEO -->
 
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-main);
-            font-size: 0.9rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: color 0.3s ease;
-        }
+<meta property="og:title" content="Anh Tư Official">
+<meta property="og:description" content="Âm nhạc và hành trình nghệ thuật">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1506157786151-b8491531f063">
 
-        .nav-links a:hover {
-            color: var(--gold);
-        }
 
-        /* Phần Banner (Hero Section) đậm chất nghệ sĩ */
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: radial-gradient(circle at center, rgba(20,20,20,0.8) 0%, rgba(7,7,7,0.98) 100%), 
-                        url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-            padding: 0 20px;
-            position: relative;
-        }
+<!-- Twitter Card -->
 
-        .hero h1 {
-            font-size: 4rem;
-            color: var(--gold-light);
-            margin-bottom: 15px;
-            font-weight: 700;
-            letter-spacing: 3px;
-            text-shadow: 0 10px 30px rgba(0,0,0,0.8);
-        }
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Anh Tư Official">
+<meta name="twitter:description" content="Official Singer Website">
 
-        .hero p {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            margin-bottom: 40px;
-            max-width: 650px;
-            font-weight: 300;
-            letter-spacing: 0.5px;
-        }
 
-        /* Nút bấm nghệ thuật dạng viền sáng */
-        .btn {
-            display: inline-block;
-            padding: 14px 35px;
-            border: 1px solid var(--gold);
-            color: var(--gold);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            background: transparent;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            margin: 8px;
-        }
+<!-- Google Font -->
 
-        .btn:hover {
-            background-color: var(--gold);
-            color: var(--bg-color);
-            box-shadow: 0 0 25px rgba(223, 177, 91, 0.4);
-            transform: translateY(-2px);
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-        /* Khung chung cho các section */
-        section {
-            padding: 120px 20px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
 
-        .section-title {
-            text-align: center;
-            font-size: 2.8rem;
-            color: var(--gold);
-            margin-bottom: 60px;
-            font-weight: 400;
-            letter-spacing: 2px;
-        }
+<!-- JSON LD -->
 
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 40px;
-            height: 1px;
-            background-color: var(--gold);
-            margin: 20px auto 0;
-        }
+<script type="application/ld+json">
 
-        /* Bố cục Tiểu sử dạng tạp chí nghệ thuật */
-        .bio-content {
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 70px;
-            align-items: center;
-        }
+{
+ "@context":"https://schema.org",
+ "@type":"Person",
+ "name":"Anh Tư",
+ "jobTitle":"Singer",
+ "description":"Ca sĩ Việt Nam",
+ "url":"https://example.com"
+}
 
-        .bio-text p {
-            margin-bottom: 25px;
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            font-weight: 300;
-        }
+</script>
 
-        .bio-text strong {
-            color: var(--text-main);
-            font-weight: 500;
-        }
 
-        .bio-img {
-            position: relative;
-        }
+<style>
 
-        .bio-img::before {
-            content: '';
-            position: absolute;
-            top: -15px;
-            left: -15px;
-            width: 100%;
-            height: 100%;
-            border: 1px solid var(--gold);
-            z-index: 0;
-            transition: transform 0.4s ease;
-        }
 
-        .bio-img:hover::before {
-            transform: translate(5px, 5px);
-        }
+/* =====================
+RESET
+===================== */
 
-        .bio-img img {
-            width: 100%;
-            height: 420px;
-            object-fit: cover;
-            position: relative;
-            z-index: 1;
-            filter: grayscale(20%);
-            transition: filter 0.4s ease;
-        }
 
-        .bio-img img:hover {
-            filter: grayscale(0%);
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-        /* Khu vực sản phẩm & Video */
-        .music-card {
-            background-color: var(--surface-color);
-            border: 1px solid var(--border-gold);
-            padding: 40px;
-            max-width: 900px;
-            margin: 0 auto;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-            transition: border-color 0.4s ease;
-        }
 
-        .music-card:hover {
-            border-color: var(--gold);
-        }
+html{
+scroll-behavior:smooth;
+}
 
-        .music-card h3 {
-            color: var(--gold-light);
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-            text-align: center;
-        }
 
-        .music-card p {
-            color: var(--text-muted);
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 0.95rem;
-        }
+body{
 
-        .video-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%;
-            height: 0;
-            background: #000;
-            border: 1px solid rgba(255,255,255,0.08);
-        }
+background:#050505;
+color:white;
 
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
+font-family:
+'Inter',
+sans-serif;
 
-        /* Khung Liên hệ phong cách Gallery */
-        .contact-box {
-            text-align: center;
-            background: var(--surface-color);
-            padding: 70px 40px;
-            border: 1px solid var(--border-gold);
-            max-width: 800px;
-            margin: 0 auto;
-        }
+overflow-x:hidden;
 
-        .contact-box p {
-            margin-bottom: 20px;
-            color: var(--text-muted);
-            font-size: 1.05rem;
-        }
+}
 
-        .contact-box a[href^="tel"] {
-            color: var(--gold);
-            font-size: 1.5rem;
-            text-decoration: none;
-            font-family: 'Playfair Display', serif;
-            letter-spacing: 1px;
-            display: inline-block;
-            margin-bottom: 25px;
-        }
 
-        .social-links {
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
 
-        /* Chân trang */
-        footer {
-            text-align: center;
-            padding: 40px;
-            background-color: #040404;
-            color: var(--text-muted);
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-            border-top: 1px solid rgba(223, 177, 91, 0.1);
-            text-transform: uppercase;
-        }
+h1,h2,h3{
 
-        /* Tương thích tối ưu cho điện thoại di động */
-        @media (max-width: 768px) {
-            header { padding: 15px 20px; }
-            .nav-links { display: none; }
-            .bio-content { grid-template-columns: 1fr; gap: 40px; }
-            .hero h1 { font-size: 2.6rem; }
-            section { padding: 80px 20px; }
-            .music-card { padding: 20px; }
-        }
-    </style>
+font-family:
+'Cormorant Garamond',
+serif;
+
+}
+
+
+
+a{
+
+color:white;
+text-decoration:none;
+
+}
+
+
+
+img{
+
+max-width:100%;
+display:block;
+
+}
+
+
+
+
+/* =====================
+LOADING SCREEN
+===================== */
+
+
+#loader{
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:100vh;
+
+background:#000;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+z-index:9999;
+
+}
+
+
+.loader-text{
+
+font-size:45px;
+letter-spacing:8px;
+color:#d4af37;
+
+animation:pulse 1.5s infinite;
+
+}
+
+
+@keyframes pulse{
+
+50%{
+opacity:.3;
+}
+
+}
+
+
+
+
+/* =====================
+HEADER
+===================== */
+
+
+header{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+z-index:1000;
+
+padding:25px 60px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:
+linear-gradient(
+180deg,
+rgba(0,0,0,.8),
+transparent
+);
+
+}
+
+
+.logo{
+
+font-size:32px;
+
+font-weight:700;
+
+letter-spacing:4px;
+
+color:#d4af37;
+
+}
+
+
+
+nav{
+
+display:flex;
+
+gap:35px;
+
+}
+
+
+
+nav a{
+
+font-size:14px;
+
+text-transform:uppercase;
+
+letter-spacing:2px;
+
+transition:.3s;
+
+}
+
+
+nav a:hover{
+
+color:#d4af37;
+
+}
+
+
+
+
+.menu-btn{
+
+display:none;
+
+font-size:30px;
+
+}
+
+
+
+
+
+/* =====================
+HERO
+===================== */
+
+
+.hero{
+
+height:100vh;
+
+position:relative;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+overflow:hidden;
+
+}
+
+
+
+.hero video{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+filter:
+brightness(.35);
+
+}
+
+
+
+.hero::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(
+transparent,
+#050505
+);
+
+}
+
+
+
+.hero-content{
+
+position:relative;
+
+z-index:2;
+
+text-align:center;
+
+}
+
+
+
+.hero h1{
+
+font-size:
+
+clamp(60px,10vw,130px);
+
+letter-spacing:10px;
+
+}
+
+
+
+.hero p{
+
+font-size:22px;
+
+margin:20px 0 40px;
+
+letter-spacing:4px;
+
+color:#ddd;
+
+}
+
+
+
+
+.btn{
+
+display:inline-block;
+
+padding:15px 40px;
+
+margin:10px;
+
+border:1px solid #d4af37;
+
+color:#d4af37;
+
+transition:.4s;
+
+}
+
+
+
+.btn:hover{
+
+background:#d4af37;
+
+color:black;
+
+}
+
+
+
+
+/* =====================
+SECTION
+===================== */
+
+
+section{
+
+padding:100px 8%;
+
+}
+
+
+
+.section-title{
+
+text-align:center;
+
+font-size:60px;
+
+margin-bottom:60px;
+
+color:#d4af37;
+
+}
+
+
+
+
+/* =====================
+ABOUT
+===================== */
+
+
+.about{
+
+display:grid;
+
+grid-template-columns:
+
+1fr 1fr;
+
+gap:60px;
+
+align-items:center;
+
+}
+
+
+
+.about img{
+
+border-radius:10px;
+
+}
+
+
+
+
+.about p{
+
+line-height:2;
+
+font-size:18px;
+
+color:#ccc;
+
+}
+
+
+
+
+
+/* =====================
+ANIMATION
+===================== */
+
+
+.reveal{
+
+opacity:0;
+
+transform:
+
+translateY(50px);
+
+transition:
+
+1s;
+
+}
+
+
+
+.reveal.active{
+
+opacity:1;
+
+transform:none;
+
+}
+
+
+
+
+
+/* =====================
+RESPONSIVE
+===================== */
+
+
+@media(max-width:900px){
+
+
+header{
+
+padding:20px;
+
+}
+
+
+nav{
+
+display:none;
+
+}
+
+
+
+.menu-btn{
+
+display:block;
+
+}
+
+
+
+.about{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.hero h1{
+
+letter-spacing:3px;
+
+}
+
+
+}
+
+
+</style>
+
+
 </head>
+
+
 <body>
 
-    <!-- Menu điều hướng -->
-    <header>
-        <a href="#" class="logo">Anh Tư Singer</a>
-        <ul class="nav-links">
-            <li><a href="#about">Tiểu Sử</a></li>
-            <li><a href="#music">Âm Nhạc</a></li>
-            <li><a href="#contact">Liên Hệ</a></li>
-        </ul>
-    </header>
 
-    <!-- Phần Banner chính -->
-    <section class="hero">
-        <h1>Anh Tư Singer</h1>
-        <p>Nghệ thuật thăng hoa từ cảm xúc chân thật và giai điệu vượt thời gian.</p>
-        <div>
-            <a href="#music" class="btn">Thưởng Thức Âm Nhạc</a>
-            <a href="https://youtube.com/@anhtu.singer?si=J-jaW-Sgvtx0rwFh" target="_blank" class="btn">Kênh YouTube</a>
-        </div>
-    </section>
 
-    <!-- Phần Tiểu sử -->
-    <section id="about">
-        <h2 class="section-title">Tiểu Sử</h2>
-        <div class="bio-content">
-            <div class="bio-text">
-                <p>Chào mừng quý vị đến với không gian âm nhạc chính thức của ca sĩ <strong>Anh Tư</strong>. Sở hữu chất giọng đặc biệt giàu chiều sâu cảm xúc, mỗi bài hát là một câu chuyện tự sự chạm đến những góc khuất tâm hồn người nghe.</p>
-                <p>Hành trình nghệ thuật theo đuổi sự tinh tế, chỉn chu trong từng giai điệu và mong muốn mang lại những giá trị văn hóa âm nhạc đích thực.</p>
-                <a href="#contact" class="btn" style="margin-top: 10px; padding: 10px 25px; font-size: 0.8rem;">Booking & Hợp Tác</a>
-            </div>
-            <div class="bio-img">
-                <!-- Tên file ảnh chân dung chuẩn theo yêu cầu: chan-dung.jpg -->
-                <img src="chan-dung.jpg" alt="Chân dung Anh Tư Singer">
-            </div>
-        </div>
-    </section>
+<div id="loader">
 
-    <!-- Phần Sản phẩm & Video YouTube -->
-    <section id="music">
-        <h2 class="section-title">Tác Phẩm Nổi Bật</h2>
-        <div class="music-card">
-            <h3>Chỉ Còn Tình Yêu</h3>
-            <p>Anh Tư & Nhật Lệ | Đinh Phương Anh (Official MV)</p>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/u54UZOcwMfM" title="Chỉ còn tình yêu - Anh Tư & Nhật Lệ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div style="text-align: center; margin-top: 30px;">
-                <a href="https://youtu.be/u54UZOcwMfM?si=BOWLea9f5sasLPlF" target="_blank" class="btn" style="font-size: 0.8rem;">Xem Trực Tiếp Trên YouTube</a>
-            </div>
-        </div>
-    </section>
+<div class="loader-text">
+AT
+</div>
 
-    <!-- Phần Liên hệ -->
-    <section id="contact">
-        <h2 class="section-title">Liên Hệ Trực Tiếp</h2>
-        <div class="contact-box">
-            <p>Dành cho các đơn vị biểu diễn, truyền thông hoặc hợp tác dự án âm nhạc:</p>
-            <div>
-                <a href="tel:0332023909">0332023909</a>
-            </div>
-            <p>Kết nối qua các kênh chính thức:</p>
-            <div class="social-links">
-                <a href="https://www.facebook.com/profile.php?id=61591720423172&mibextid=wwXIfr&mibextid=wwXIfr" target="_blank" class="btn">Facebook Fanpage</a>
-                <a href="https://youtube.com/@anhtu.singer?si=J-jaW-Sgvtx0rwFh" target="_blank" class="btn">YouTube Channel</a>
-            </div>
-        </div>
-    </section>
+</div>
 
-    <!-- Chân trang -->
-    <footer>
-        <p>&copy; 2026 Anh Tư Singer. All Rights Reserved.</p>
-    </footer>
+
+
+<header>
+
+
+<div class="logo">
+AT
+</div>
+
+
+<nav>
+
+<a href="#home">Trang chủ</a>
+
+<a href="#about">Giới thiệu</a>
+
+<a href="#album">Album</a>
+
+<a href="#music">Âm nhạc</a>
+
+<a href="#mv">MV</a>
+
+<a href="#gallery">Gallery</a>
+
+<a href="#news">Tin tức</a>
+
+<a href="#contact">Liên hệ</a>
+
+</nav>
+
+
+<div class="menu-btn">
+☰
+</div>
+
+
+</header>
+
+
+
+
+
+<!-- HERO -->
+
+
+<section class="hero" id="home">
+
+
+<video autoplay muted loop playsinline>
+
+<source src="https://cdn.coverr.co/videos/coverr-a-man-playing-the-piano-1575/1080p.mp4" type="video/mp4">
+
+</video>
+
+
+
+<div class="hero-content">
+
+
+<h1>
+ANH TƯ
+</h1>
+
+
+<p>
+ÂM NHẠC • CẢM XÚC • HÀNH TRÌNH
+</p>
+
+
+
+<a class="btn" href="#music">
+NGHE NHẠC
+</a>
+
+
+<a class="btn" href="#mv">
+XEM MV
+</a>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- GIỚI THIỆU -->
+
+
+<section id="about">
+
+
+<h2 class="section-title reveal">
+Giới thiệu
+</h2>
+
+
+
+<div class="about reveal">
+
+
+<img loading="lazy"
+src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b"
+alt="Singer">
+
+
+<div>
+
+<p>
+
+Anh Tư là nghệ sĩ theo đuổi phong cách âm nhạc giàu cảm xúc.
+Website chính thức lưu giữ hành trình nghệ thuật,
+những ca khúc, album và khoảnh khắc đáng nhớ trên sân khấu.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Anh Tư Official | Ca sĩ</title>
+
+<meta name="description" content="Website chính thức của ca sĩ Anh Tư. Âm nhạc, MV, album, lịch diễn và những câu chuyện nghệ thuật.">
+
+<meta name="keywords" content="Anh Tư, ca sĩ, âm nhạc, MV, album">
+
+<meta name="author" content="Anh Tư Official">
+
+
+<!-- Open Graph SEO -->
+
+<meta property="og:title" content="Anh Tư Official">
+<meta property="og:description" content="Âm nhạc và hành trình nghệ thuật">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1506157786151-b8491531f063">
+
+
+<!-- Twitter Card -->
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Anh Tư Official">
+<meta name="twitter:description" content="Official Singer Website">
+
+
+<!-- Google Font -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+
+<!-- JSON LD -->
+
+<script type="application/ld+json">
+
+{
+ "@context":"https://schema.org",
+ "@type":"Person",
+ "name":"Anh Tư",
+ "jobTitle":"Singer",
+ "description":"Ca sĩ Việt Nam",
+ "url":"https://example.com"
+}
+
+</script>
+
+
+<style>
+
+
+/* =====================
+RESET
+===================== */
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+html{
+scroll-behavior:smooth;
+}
+
+
+body{
+
+background:#050505;
+color:white;
+
+font-family:
+'Inter',
+sans-serif;
+
+overflow-x:hidden;
+
+}
+
+
+
+h1,h2,h3{
+
+font-family:
+'Cormorant Garamond',
+serif;
+
+}
+
+
+
+a{
+
+color:white;
+text-decoration:none;
+
+}
+
+
+
+img{
+
+max-width:100%;
+display:block;
+
+}
+
+
+
+
+/* =====================
+LOADING SCREEN
+===================== */
+
+
+#loader{
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:100vh;
+
+background:#000;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+z-index:9999;
+
+}
+
+
+.loader-text{
+
+font-size:45px;
+letter-spacing:8px;
+color:#d4af37;
+
+animation:pulse 1.5s infinite;
+
+}
+
+
+@keyframes pulse{
+
+50%{
+opacity:.3;
+}
+
+}
+
+
+
+
+/* =====================
+HEADER
+===================== */
+
+
+header{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+z-index:1000;
+
+padding:25px 60px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:
+linear-gradient(
+180deg,
+rgba(0,0,0,.8),
+transparent
+);
+
+}
+
+
+.logo{
+
+font-size:32px;
+
+font-weight:700;
+
+letter-spacing:4px;
+
+color:#d4af37;
+
+}
+
+
+
+nav{
+
+display:flex;
+
+gap:35px;
+
+}
+
+
+
+nav a{
+
+font-size:14px;
+
+text-transform:uppercase;
+
+letter-spacing:2px;
+
+transition:.3s;
+
+}
+
+
+nav a:hover{
+
+color:#d4af37;
+
+}
+
+
+
+
+.menu-btn{
+
+display:none;
+
+font-size:30px;
+
+}
+
+
+
+
+
+/* =====================
+HERO
+===================== */
+
+
+.hero{
+
+height:100vh;
+
+position:relative;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+overflow:hidden;
+
+}
+
+
+
+.hero video{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+filter:
+brightness(.35);
+
+}
+
+
+
+.hero::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(
+transparent,
+#050505
+);
+
+}
+
+
+
+.hero-content{
+
+position:relative;
+
+z-index:2;
+
+text-align:center;
+
+}
+
+
+
+.hero h1{
+
+font-size:
+
+clamp(60px,10vw,130px);
+
+letter-spacing:10px;
+
+}
+
+
+
+.hero p{
+
+font-size:22px;
+
+margin:20px 0 40px;
+
+letter-spacing:4px;
+
+color:#ddd;
+
+}
+
+
+
+
+.btn{
+
+display:inline-block;
+
+padding:15px 40px;
+
+margin:10px;
+
+border:1px solid #d4af37;
+
+color:#d4af37;
+
+transition:.4s;
+
+}
+
+
+
+.btn:hover{
+
+background:#d4af37;
+
+color:black;
+
+}
+
+
+
+
+/* =====================
+SECTION
+===================== */
+
+
+section{
+
+padding:100px 8%;
+
+}
+
+
+
+.section-title{
+
+text-align:center;
+
+font-size:60px;
+
+margin-bottom:60px;
+
+color:#d4af37;
+
+}
+
+
+
+
+/* =====================
+ABOUT
+===================== */
+
+
+.about{
+
+display:grid;
+
+grid-template-columns:
+
+1fr 1fr;
+
+gap:60px;
+
+align-items:center;
+
+}
+
+
+
+.about img{
+
+border-radius:10px;
+
+}
+
+
+
+
+.about p{
+
+line-height:2;
+
+font-size:18px;
+
+color:#ccc;
+
+}
+
+
+
+
+
+/* =====================
+ANIMATION
+===================== */
+
+
+.reveal{
+
+opacity:0;
+
+transform:
+
+translateY(50px);
+
+transition:
+
+1s;
+
+}
+
+
+
+.reveal.active{
+
+opacity:1;
+
+transform:none;
+
+}
+
+
+
+
+
+/* =====================
+RESPONSIVE
+===================== */
+
+
+@media(max-width:900px){
+
+
+header{
+
+padding:20px;
+
+}
+
+
+nav{
+
+display:none;
+
+}
+
+
+
+.menu-btn{
+
+display:block;
+
+}
+
+
+
+.about{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.hero h1{
+
+letter-spacing:3px;
+
+}
+
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<div id="loader">
+
+<div class="loader-text">
+AT
+</div>
+
+</div>
+
+
+
+<header>
+
+
+<div class="logo">
+AT
+</div>
+
+
+<nav>
+
+<a href="#home">Trang chủ</a>
+
+<a href="#about">Giới thiệu</a>
+
+<a href="#album">Album</a>
+
+<a href="#music">Âm nhạc</a>
+
+<a href="#mv">MV</a>
+
+<a href="#gallery">Gallery</a>
+
+<a href="#news">Tin tức</a>
+
+<a href="#contact">Liên hệ</a>
+
+</nav>
+
+
+<div class="menu-btn">
+☰
+</div>
+
+
+</header>
+
+
+
+
+
+<!-- HERO -->
+
+
+<section class="hero" id="home">
+
+
+<video autoplay muted loop playsinline>
+
+<source src="https://cdn.coverr.co/videos/coverr-a-man-playing-the-piano-1575/1080p.mp4" type="video/mp4">
+
+</video>
+
+
+
+<div class="hero-content">
+
+
+<h1>
+ANH TƯ
+</h1>
+
+
+<p>
+ÂM NHẠC • CẢM XÚC • HÀNH TRÌNH
+</p>
+
+
+
+<a class="btn" href="#music">
+NGHE NHẠC
+</a>
+
+
+<a class="btn" href="#mv">
+XEM MV
+</a>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- GIỚI THIỆU -->
+
+
+<section id="about">
+
+
+<h2 class="section-title reveal">
+Giới thiệu
+</h2>
+
+
+
+<div class="about reveal">
+
+
+<img loading="lazy"
+src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b"
+alt="Singer">
+
+
+<div>
+
+<p>
+
+Anh Tư là nghệ sĩ theo đuổi phong cách âm nhạc giàu cảm xúc.
+Website chính thức lưu giữ hành trình nghệ thuật,
+những ca khúc, album và khoảnh khắc đáng nhớ trên sân khấu.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+<!-- =====================
+FAN CLUB
+===================== -->
+
+
+<section id="fanclub">
+
+
+<h2 class="section-title reveal">
+Fan Club
+</h2>
+
+
+<div class="player reveal">
+
+
+<h3>
+Gia nhập cộng đồng Anh Tư
+</h3>
+
+
+<p>
+
+Cùng chia sẻ tình yêu âm nhạc,
+cập nhật những dự án mới nhất,
+hậu trường và những khoảnh khắc đặc biệt.
+
+</p>
+
+
+<a class="btn" href="#">
+Tham gia ngay
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- =====================
+NEWSLETTER
+===================== -->
+
+
+<section>
+
+
+<h2 class="section-title reveal">
+
+Đăng ký nhận tin
+
+</h2>
+
+
+
+<div class="player reveal">
+
+
+<input 
+type="email"
+placeholder="Email của bạn">
+
+
+<button>
+Đăng ký
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- =====================
+LIÊN HỆ
+===================== -->
+
+
+<section id="contact">
+
+
+<h2 class="section-title reveal">
+
+Liên hệ
+
+</h2>
+
+
+
+<div class="player reveal">
+
+
+<p>
+Booking / Collaboration
+</p>
+
+
+<p>
+Email:
+booking@anhtu.com
+</p>
+
+
+<p>
+Facebook:
+Anh Tư Official
+</p>
+
+
+<p>
+YouTube:
+Anh Tư Music
+</p>
+
+
+
+<form>
+
+
+<input 
+placeholder="Họ tên">
+
+
+<input 
+placeholder="Email">
+
+
+<textarea
+placeholder="Nội dung">
+</textarea>
+
+
+<button>
+Gửi liên hệ
+</button>
+
+
+</form>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<style>
+
+
+input,
+textarea{
+
+width:100%;
+
+padding:15px;
+
+margin:10px 0;
+
+background:#111;
+
+border:
+
+1px solid #333;
+
+color:white;
+
+border-radius:8px;
+
+}
+
+
+
+textarea{
+
+height:150px;
+
+}
+
+
+
+</style>
+
+
+
+
+
+
+
+<!-- =====================
+FOOTER
+===================== -->
+
+
+<footer>
+
+
+<div class="logo">
+
+AT
+
+</div>
+
+
+<p>
+
+© 2026 Anh Tư Official.
+All Rights Reserved.
+
+</p>
+
+
+
+<div>
+
+<a href="#">
+Facebook
+</a>
+
+|
+
+<a href="#">
+YouTube
+</a>
+
+|
+
+<a href="#">
+TikTok
+</a>
+
+</div>
+
+
+
+</footer>
+
+
+
+
+
+
+<!-- BACK TO TOP -->
+
+
+<div id="top">
+
+↑
+
+</div>
+
+
+
+
+
+
+<style>
+
+
+footer{
+
+padding:50px;
+
+text-align:center;
+
+background:#000;
+
+color:#888;
+
+}
+
+
+
+footer .logo{
+
+margin-bottom:20px;
+
+}
+
+
+
+#top{
+
+position:fixed;
+
+right:30px;
+
+bottom:30px;
+
+width:50px;
+
+height:50px;
+
+background:#d4af37;
+
+color:#000;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+border-radius:50%;
+
+cursor:pointer;
+
+opacity:0;
+
+transition:.4s;
+
+}
+
+
+
+#top.show{
+
+opacity:1;
+
+}
+
+
+
+</style>
+
+
+
+
+
+
+<script>
+
+
+// =================
+// LOADING
+// =================
+
+
+window.addEventListener(
+"load",
+()=>{
+
+document
+.getElementById("loader")
+.style.display="none";
+
+});
+
+
+
+
+
+// =================
+// SCROLL REVEAL
+// =================
+
+
+const reveals =
+document.querySelectorAll(".reveal");
+
+
+
+function reveal(){
+
+for(
+let i=0;
+i<reveals.length;
+i++
+){
+
+let windowHeight =
+window.innerHeight;
+
+
+let elementTop =
+reveals[i]
+.getBoundingClientRect()
+.top;
+
+
+
+if(
+elementTop <
+windowHeight - 100
+){
+
+reveals[i]
+.classList
+.add("active");
+
+}
+
+}
+
+
+}
+
+
+window.addEventListener(
+"scroll",
+reveal
+);
+
+
+
+reveal();
+
+
+
+
+
+
+
+// =================
+// BACK TO TOP
+// =================
+
+
+const topBtn =
+document.getElementById("top");
+
+
+
+window.addEventListener(
+"scroll",
+()=>{
+
+
+if(
+window.scrollY > 500
+){
+
+topBtn.classList.add("show");
+
+}
+
+else{
+
+topBtn.classList.remove("show");
+
+}
+
+
+});
+
+
+
+topBtn.onclick=()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+
+
+
+
+
+// =================
+// MOBILE MENU
+// =================
+
+
+const menu =
+document.querySelector(".menu-btn");
+
+
+const nav =
+document.querySelector("nav");
+
+
+
+menu.onclick=()=>{
+
+
+if(
+nav.style.display==="flex"
+){
+
+nav.style.display="none";
+
+}
+
+else{
+
+nav.style.display="flex";
+
+nav.style.flexDirection="column";
+
+nav.style.position="absolute";
+
+nav.style.top="80px";
+
+nav.style.right="20px";
+
+nav.style.background="#000";
+
+nav.style.padding="30px";
+
+}
+
+
+};
+
+
+
+
+
+
+</script>
+
+
+
+
 
 </body>
+
 </html>
