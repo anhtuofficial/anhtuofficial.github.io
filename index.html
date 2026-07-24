@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ca Sĩ Profile - Official Website</title>
+    <!-- Font chữ sang trọng từ Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0b0b;
+            --card-bg: #161616;
+            --gold-color: #d4af37;
+            --gold-light: #f3e5ab;
+            --text-color: #e0e0e0;
+            --text-muted: #999999;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .nav-links a {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 1px;
+        }
+
+        /* Thanh điều hướng (Header) */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(11, 11, 11, 0.95);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: var(--gold-color);
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold-color);
+        }
+
+        /* Phần Banner chính (Hero) */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(11,11,11,0.6), rgba(11,11,11,0.9)), url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--gold-light);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border: 2px solid var(--gold-color);
+            color: var(--gold-color);
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--gold-color);
+            color: var(--bg-color);
+        }
+
+        /* Các khối nội dung chung */
+        section {
+            padding: 100px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--gold-color);
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background-color: var(--gold-color);
+            margin: 15px auto 0;
+        }
+
+        /* Tiểu sử (Biography) */
+        .bio-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .bio-text p {
+            margin-bottom: 20px;
+            color: var(--text-muted);
+        }
+
+        .bio-img img {
+            width: 100%;
+            border-radius: 4px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        /* Danh sách Đĩa nhạc / Dự án nổi bật (Discography) */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold-color);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: var(--gold-light);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Liên hệ (Contact) */
+        .contact-box {
+            text-align: center;
+            background: var(--card-bg);
+            padding: 50px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .contact-box p {
+            margin-bottom: 20px;
+            color: var(--text-muted);
+        }
+
+        /* Chân trang (Footer) */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #050505;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        /* Tương thích thiết bị di động */
+        @media (max-width: 768px) {
+            header { padding: 15px 20px; }
+            .nav-links { display: none; } /* Có thể ẩn menu gọn hoặc tùy biến trên mobile */
+            .bio-content { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu điều hướng -->
+    <header>
+        <a href="#" class="logo">ARTIST NAME</a>
+        <ul class="nav-links">
+            <li><a href="#about">Tiểu Sử</a></li>
+            <li><a href="#music">Sản Phẩm</a></li>
+            <li><a href="#contact">Liên Hệ</a></li>
+        </ul>
+    </header>
+
+    <!-- Phần mở đầu / Banner -->
+    <section class="hero">
+        <h1>Nghệ Sĩ / Ca Sĩ</h1>
+        <p>Official Website & Portfolio - Đẳng cấp, Âm nhạc và Cảm xúc.</p>
+        <a href="#about" class="btn">Khám Phá Ngay</a>
+    </section>
+
+    <!-- Phần Tiểu sử -->
+    <section id="about">
+        <h2 class="section-title">Tiểu Sử</h2>
+        <div class="bio-content">
+            <div class="bio-text">
+                <p>Sở hữu chất giọng đặc biệt cùng tư duy âm nhạc văn minh, nghệ sĩ đã khẳng định được dấu ấn riêng biệt trong lòng khán giả yêu nhạc Việt Nam qua nhiều thế hệ.</p>
+                <p>Với hành trình nghệ thuật bền bỉ, mỗi sản phẩm âm nhạc ra mắt đều là sự kết tinh giữa tâm huyết, sự chỉn chu và khát vọng mang đến những giá trị nghệ thuật đích thực.</p>
+                <a href="#contact" class="btn" style="margin-top: 10px; font-size: 0.8rem; padding: 10px 20px;">Hợp Tác</a>
+            </div>
+            <div class="bio-img">
+                <!-- Bạn có thể thay link ảnh này bằng link ảnh thật của bạn trên GitHub -->
+                <img src="https://images.unsplash.com/photo-1526478806334-5fd488fcaabc?auto=format&fit=crop&w=800&q=80" alt="Chân dung nghệ sĩ">
+            </div>
+        </div>
+    </section>
+
+    <!-- Phần Dự án / Đĩa nhạc nổi bật -->
+    <section id="music">
+        <h2 class="section-title">Sản Phẩm Nổi Bật</h2>
+        <div class="grid-container">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=500&q=80" alt="Album 1">
+                <h3>Album Vol. 1</h3>
+                <p>Dấu mốc khởi đầu rực rỡ với các bản hit mang âm hưởng đương đại.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=500&q=80" alt="Single mới">
+                <h3>Live Session 2026</h3>
+                <p>Không gian âm nhạc mộc mạc, nơi cảm xúc thăng hoa cùng ban nhạc sống.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=500&q=80" alt="Dự án đặc biệt">
+                <h3>The Concert</h3>
+                <p>Đêm diễn đánh dấu hành trình nghệ thuật với quy mô hoành tráng.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phần Liên hệ -->
+    <section id="contact">
+        <h2 class="section-title">Liên Hệ & Đặt Lịch Biểu Diễn</h2>
+        <div class="contact-box">
+            <p>Mọi thông tin hợp tác biểu diễn, truyền thông hoặc tài trợ dự án, vui lòng liên hệ:</p>
+            <p><strong>Email:</strong> booking@artistname.com | <strong>Hotline:</strong> (+84) 123 456 789</p>
+            <a href="mailto:booking@artistname.com" class="btn" style="margin-top: 15px;">Gửi Email Hợp Tác</a>
+        </div>
+    </section>
+
+    <!-- Chân trang -->
+    <footer>
+        <p>&copy; 2026 Artist Name. All Rights Reserved. Powered by GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
