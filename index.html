@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Anh Tư Official | Ca sĩ</title>
+
+
+<meta name="description" content="Anh Tư Official - Ca sĩ Việt Nam. Âm nhạc, MV, album và hành trình nghệ thuật">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+
+html{
+scroll-behavior:smooth;
+}
+
+
+
+body{
+
+background:#050505;
+
+color:white;
+
+font-family:Inter,sans-serif;
+
+}
+
+
+
+h1,h2,h3{
+
+font-family:"Cormorant Garamond",serif;
+
+}
+
+
+
+a{
+
+text-decoration:none;
+
+color:white;
+
+}
+
+
+
+img{
+
+width:100%;
+
+display:block;
+
+}
+
+
+
+/* HEADER */
+
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+
+padding:25px 8%;
+
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+
+z-index:1000;
+
+
+background:
+
+linear-gradient(
+black,
+transparent
+);
+
+}
+
+
+
+.logo{
+
+font-size:38px;
+
+font-weight:bold;
+
+letter-spacing:4px;
+
+color:#d4af37;
+
+}
+
+
+
+nav{
+
+display:flex;
+
+gap:28px;
+
+}
+
+
+
+nav a{
+
+font-size:13px;
+
+text-transform:uppercase;
+
+letter-spacing:1px;
+
+transition:.3s;
+
+}
+
+
+
+nav a:hover{
+
+color:#d4af37;
+
+}
+
+
+
+.menu{
+
+display:none;
+
+font-size:30px;
+
+}
+
+
+
+/* HERO */
+
+
+.hero{
+
+height:100vh;
+
+position:relative;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+overflow:hidden;
+
+}
+
+
+
+.hero img{
+
+position:absolute;
+
+inset:0;
+
+height:100%;
+
+object-fit:cover;
+
+filter:brightness(.35);
+
+}
+
+
+
+.hero:after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+
+background:
+
+linear-gradient(
+transparent,
+#050505
+);
+
+}
+
+
+
+.hero-content{
+
+position:relative;
+
+z-index:2;
+
+}
+
+
+
+.hero h1{
+
+font-size:
+
+clamp(60px,12vw,140px);
+
+
+letter-spacing:15px;
+
+
+animation:zoom 1.5s ease;
+
+}
+
+
+
+.hero p{
+
+font-size:20px;
+
+letter-spacing:5px;
+
+color:#ddd;
+
+margin:25px 0 40px;
+
+}
+
+
+
+@keyframes zoom{
+
+from{
+
+transform:scale(1.1);
+
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+
+
+
+
+/* BUTTON */
+
+
+.btn{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+
+padding:16px 38px;
+
+
+border-radius:50px;
+
+
+border:1px solid #d4af37;
+
+
+background:
+
+linear-gradient(
+135deg,
+rgba(212,175,55,.15),
+rgba(255,255,255,.05)
+);
+
+
+color:#f5d77b;
+
+
+font-size:14px;
+
+font-weight:600;
+
+
+letter-spacing:2px;
+
+
+margin:8px;
+
+
+position:relative;
+
+overflow:hidden;
+
+
+transition:.4s;
+
+
+}
+
+
+
+.btn:hover{
+
+transform:translateY(-5px);
+
+
+background:#d4af37;
+
+
+color:#000;
+
+
+box-shadow:
+
+0 10px 40px rgba(212,175,55,.5);
+
+}
+
+
+
+
+/* SECTION */
+
+
+section{
+
+padding:100px 8%;
+
+}
+
+
+
+.title{
+
+text-align:center;
+
+font-size:60px;
+
+color:#d4af37;
+
+margin-bottom:60px;
+
+}
+
+
+
+/* ABOUT */
+
+
+.about{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+align-items:center;
+
+}
+
+
+
+.about img{
+
+border-radius:20px;
+
+}
+
+
+
+.about p{
+
+font-size:18px;
+
+line-height:2;
+
+color:#ccc;
+
+}
+
+
+
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:1s;
+
+}
+
+
+
+.show{
+
+opacity:1;
+
+transform:none;
+
+}
+
+
+
+
+@media(max-width:900px){
+
+
+nav{
+
+display:none;
+
+}
+
+
+
+.menu{
+
+display:block;
+
+}
+
+
+
+.about{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.hero h1{
+
+letter-spacing:7px;
+
+}
+
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+
+<div class="logo">
+AT
+</div>
+
+
+<nav>
+
+<a href="#home">Trang chủ</a>
+
+<a href="#about">Giới thiệu</a>
+
+<a href="#music">Âm nhạc</a>
+
+<a href="#mv">MV</a>
+
+<a href="#gallery">Gallery</a>
+
+<a href="#news">Tin tức</a>
+
+<a href="#contact">Liên hệ</a>
+
+
+</nav>
+
+
+<div class="menu">
+☰
+</div>
+
+
+</header>
+
+
+
+
+
+<section class="hero" id="home">
+
+
+<img src="images/anh-tu-hero.jpg" alt="Anh Tư">
+
+
+<div class="hero-content">
+
+
+<h1>
+ANH TƯ
+</h1>
+
+
+<p>
+ÂM NHẠC • CẢM XÚC • HÀNH TRÌNH
+</p>
+
+
+<a class="btn" href="#music">
+
+🎧 NGHE NHẠC
+
+</a>
+
+
+<a class="btn" 
+href="https://youtube.com/@anhtu.singer?si=0LS_VZOnsgvDQR4O"
+target="_blank">
+
+▶ YOUTUBE
+
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section id="about">
+
+
+<h2 class="title reveal">
+Giới thiệu
+</h2>
+
+
+
+<div class="about reveal">
+
+
+<img src="images/anh-tu-chan-dung.jpg" alt="Chân dung Anh Tư">
+
+
+
+<p>
+
+Anh Tư là ca sĩ theo đuổi phong cách âm nhạc giàu cảm xúc,
+mong muốn kết nối khán giả bằng những câu chuyện qua từng ca khúc.
+
+<br><br>
+
+Website chính thức là nơi lưu giữ hành trình nghệ thuật,
+các sản phẩm âm nhạc, MV, hình ảnh sân khấu
+và những dấu ấn đáng nhớ trong sự nghiệp ca hát.
+
+</p>
+
+
+</div>
+
+
+</section>
+<!-- =====================
+ALBUM
+===================== -->
+
+
+<section id="album">
+
+
+<h2 class="title reveal">
+Album
+</h2>
+
+
+
+<div class="cards reveal">
+
+
+<div class="card">
+
+<img src="images/album-01.jpg" alt="Album Anh Tư 01">
+
+<h3>
+Album 01
+</h3>
+
+<p>
+Những ca khúc nổi bật
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<img src="images/album-02.jpg" alt="Album Anh Tư 02">
+
+<h3>
+Album 02
+</h3>
+
+<p>
+Hành trình âm nhạc
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<img src="images/album-03.jpg" alt="Album Anh Tư 03">
+
+<h3>
+Album 03
+</h3>
+
+<p>
+Live Performance
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<style>
+
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+}
+
+
+
+.card{
+
+background:#111;
+
+border-radius:20px;
+
+overflow:hidden;
+
+transition:.5s;
+
+}
+
+
+
+.card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:
+
+0 15px 40px rgba(212,175,55,.25);
+
+}
+
+
+
+.card img{
+
+height:360px;
+
+object-fit:cover;
+
+}
+
+
+
+.card h3{
+
+font-size:35px;
+
+padding:20px;
+
+}
+
+
+
+.card p{
+
+padding:0 20px 25px;
+
+color:#aaa;
+
+}
+
+
+
+
+@media(max-width:900px){
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+
+</style>
+
+
+
+
+
+
+
+
+<!-- =====================
+ÂM NHẠC
+===================== -->
+
+
+<section id="music">
+
+
+<h2 class="title reveal">
+
+Âm nhạc
+
+</h2>
+
+
+
+<div class="music-box reveal">
+
+
+<h3>
+Danh sách bài hát
+</h3>
+
+
+
+<div class="song">
+
+
+🎵
+
+<a href="https://youtu.be/u54UZOcwMfM?si=AmgCuxg1ZcNE-pr9"
+target="_blank">
+
+Chỉ Còn Tình Yêu
+
+</a>
+
+
+</div>
+
+
+
+<div class="song">
+
+
+🎵
+
+<a href="https://youtu.be/Wemc37ra_a8?si=svrLl5hcquKblQeB"
+target="_blank">
+
+Sợ Yêu
+
+</a>
+
+
+</div>
+
+
+<br>
+
+
+<a class="btn"
+
+href="https://youtube.com/@anhtu.singer?si=0LS_VZOnsgvDQR4O"
+
+target="_blank">
+
+▶ Xem tất cả trên YouTube
+
+</a>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<style>
+
+
+.music-box{
+
+max-width:750px;
+
+margin:auto;
+
+background:#111;
+
+padding:40px;
+
+border-radius:25px;
+
+}
+
+
+
+.song{
+
+padding:20px 0;
+
+border-bottom:1px solid #333;
+
+font-size:18px;
+
+}
+
+
+
+.song a:hover{
+
+color:#d4af37;
+
+}
+
+
+</style>
+
+
+
+
+
+
+
+
+<!-- =====================
+MV
+===================== -->
+
+
+<section id="mv">
+
+
+<h2 class="title reveal">
+
+MV mới nhất
+
+</h2>
+
+
+
+
+<div class="mv-grid reveal">
+
+
+
+<div class="mv-card">
+
+
+<img src="images/mv-chi-con-tinh-yeu.jpg"
+alt="MV Chỉ Còn Tình Yêu">
+
+
+<h3>
+
+Chỉ Còn Tình Yêu
+
+</h3>
+
+
+
+<a class="btn"
+
+href="https://youtu.be/u54UZOcwMfM?si=AmgCuxg1ZcNE-pr9"
+
+target="_blank">
+
+▶ Xem MV
+
+</a>
+
+
+</div>
+
+
+
+
+
+<div class="mv-card">
+
+
+<img src="images/mv-so-yeu.jpg"
+alt="MV Sợ Yêu">
+
+
+<h3>
+
+Sợ Yêu
+
+</h3>
+
+
+
+<a class="btn"
+
+href="https://youtu.be/Wemc37ra_a8?si=svrLl5hcquKblQeB"
+
+target="_blank">
+
+▶ Xem MV
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<style>
+
+
+.mv-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:40px;
+
+}
+
+
+
+.mv-card{
+
+background:#111;
+
+padding-bottom:30px;
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+
+
+.mv-card img{
+
+height:350px;
+
+object-fit:cover;
+
+}
+
+
+
+.mv-card h3{
+
+font-size:35px;
+
+padding:25px;
+
+}
+
+
+
+
+
+@media(max-width:900px){
+
+.mv-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+
+</style>
+
+
+
+
+
+
+
+
+<!-- =====================
+GALLERY
+===================== -->
+
+
+<section id="gallery">
+
+
+<h2 class="title reveal">
+
+Gallery
+
+</h2>
+
+
+
+
+<div class="gallery reveal">
+
+
+<img src="images/gallery-01.jpg"
+alt="Anh Tư Gallery 01">
+
+
+<img src="images/gallery-02.jpg"
+alt="Anh Tư Gallery 02">
+
+
+<img src="images/gallery-03.jpg"
+alt="Anh Tư Gallery 03">
+
+
+<img src="images/gallery-04.jpg"
+alt="Anh Tư Gallery 04">
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<style>
+
+
+.gallery{
+
+columns:3;
+
+column-gap:20px;
+
+}
+
+
+
+.gallery img{
+
+margin-bottom:20px;
+
+border-radius:20px;
+
+transition:.4s;
+
+}
+
+
+
+.gallery img:hover{
+
+transform:scale(1.03);
+
+}
+
+
+
+@media(max-width:900px){
+
+.gallery{
+
+columns:2;
+
+}
+
+}
+
+
+</style>
+<!-- =====================
+HÀNH TRÌNH NGHỆ THUẬT
+===================== -->
+
+
+<section id="journey">
+
+
+<h2 class="title reveal">
+
+Hành trình nghệ thuật
+
+</h2>
+
+
+
+<div class="music-box reveal">
+
+
+<h3>
+
+Âm nhạc là câu chuyện của cảm xúc
+
+</h3>
+
+
+<p>
+
+
+Mỗi ca khúc là một dấu ấn trong hành trình
+nghệ thuật của Anh Tư.
+
+<br><br>
+
+
+Từ những sân khấu đầu tiên đến những sản phẩm âm nhạc
+được gửi tới khán giả, Anh Tư luôn hướng tới sự chân thành,
+cảm xúc và kết nối qua từng giai điệu.
+
+<br><br>
+
+
+Hành trình phía trước sẽ tiếp tục được viết nên
+bằng âm nhạc và tình yêu dành cho khán giả.
+
+
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- =====================
+BÁO CHÍ & SỰ KIỆN
+===================== -->
+
+
+<section id="press">
+
+
+<h2 class="title reveal">
+
+Báo chí & Sự kiện
+
+</h2>
+
+
+
+<div class="cards reveal">
+
+
+<div class="card">
+
+
+<img src="images/anh-tu-san-khau.jpg"
+alt="Anh Tư biểu diễn">
+
+
+<h3>
+
+Đêm nhạc kỷ niệm 15 năm sáng tác
+
+</h3>
+
+
+<p>
+
+Vinh dự góp giọng trong đêm nhạc
+kỷ niệm 15 năm sáng tác của nhạc sĩ
+Đinh Phương Anh.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<img src="images/gallery-03.jpg"
+alt="Hoạt động nghệ thuật">
+
+
+<h3>
+
+Hoạt động nghệ thuật
+
+</h3>
+
+
+<p>
+
+Cập nhật những dấu ấn,
+sự kiện và khoảnh khắc đáng nhớ.
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================
+FAN CLUB
+===================== -->
+
+
+<section id="fanclub">
+
+
+<h2 class="title reveal">
+
+Fan Club
+
+</h2>
+
+
+
+
+<div class="music-box reveal">
+
+
+<h3>
+
+Cộng đồng Anh Tư
+
+</h3>
+
+
+
+<p>
+
+
+Nơi kết nối những khán giả yêu âm nhạc,
+chia sẻ sản phẩm mới,
+hình ảnh sân khấu và những khoảnh khắc
+đáng nhớ cùng nghệ sĩ.
+
+
+</p>
+
+
+
+<br>
+
+
+
+<a class="btn"
+
+href="https://www.facebook.com/share/1BjugcaA9f/?mibextid=wwXIfr"
+
+target="_blank">
+
+
+f FANPAGE
+
+
+</a>
+
+
+
+<a class="btn"
+
+href="https://youtube.com/@anhtu.singer?si=0LS_VZOnsgvDQR4O"
+
+target="_blank">
+
+
+▶ YOUTUBE
+
+
+</a>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- =====================
+BOOKING
+===================== -->
+
+
+<section id="contact">
+
+
+<h2 class="title reveal">
+
+Liên hệ Booking
+
+</h2>
+
+
+
+
+<div class="music-box reveal">
+
+
+<h3>
+
+Anh Tư Official
+
+</h3>
+
+
+
+<p>
+
+
+📞 Booking Show:
+
+<br>
+
+<strong>
+033.2023.909
+</strong>
+
+
+</p>
+
+
+
+<br>
+
+
+
+<p>
+
+YouTube:
+
+<br>
+
+
+<a href="https://youtube.com/@anhtu.singer?si=0LS_VZOnsgvDQR4O"
+
+target="_blank">
+
+
+youtube.com/@anhtu.singer
+
+
+</a>
+
+
+</p>
+
+
+
+
+<br>
+
+
+
+<p>
+
+Facebook:
+
+<br>
+
+
+<a href="https://www.facebook.com/share/1BjugcaA9f/?mibextid=wwXIfr"
+
+target="_blank">
+
+
+Anh Tư Official
+
+
+</a>
+
+
+</p>
+
+
+
+
+<br>
+
+
+
+<a class="btn"
+
+href="tel:0332023909">
+
+
+☎ GỌI NGAY
+
+
+</a>
+
+
+
+</div>
+
+
+
+</section>
+<!-- =====================
+FOOTER
+===================== -->
+
+
+<footer>
+
+
+<div class="footer-logo">
+
+AT
+
+</div>
+
+
+<p>
+
+Anh Tư Official
+
+</p>
+
+
+<p>
+
+Âm nhạc • Cảm xúc • Hành trình
+
+</p>
+
+
+
+<div class="social">
+
+
+<a href="https://youtube.com/@anhtu.singer?si=0LS_VZOnsgvDQR4O"
+target="_blank">
+
+YouTube
+
+</a>
+
+
+<a href="https://www.facebook.com/share/1BjugcaA9f/?mibextid=wwXIfr"
+target="_blank">
+
+Facebook
+
+</a>
+
+
+</div>
+
+
+
+<p class="copyright">
+
+© 2026 Anh Tư Official. All Rights Reserved.
+
+</p>
+
+
+
+</footer>
+
+
+
+
+
+
+
+
+<style>
+
+
+footer{
+
+padding:80px 8%;
+
+text-align:center;
+
+background:#000;
+
+border-top:1px solid #222;
+
+}
+
+
+
+.footer-logo{
+
+font-size:70px;
+
+font-family:"Cormorant Garamond";
+
+font-weight:bold;
+
+color:#d4af37;
+
+letter-spacing:10px;
+
+}
+
+
+
+footer p{
+
+color:#999;
+
+margin:15px;
+
+}
+
+
+
+.social{
+
+margin:30px 0;
+
+}
+
+
+
+.social a{
+
+display:inline-block;
+
+margin:10px;
+
+padding:12px 25px;
+
+border:1px solid #333;
+
+border-radius:30px;
+
+transition:.3s;
+
+}
+
+
+
+.social a:hover{
+
+border-color:#d4af37;
+
+color:#d4af37;
+
+}
+
+
+
+.copyright{
+
+font-size:13px;
+
+}
+
+
+</style>
+
+
+
+
+
+
+
+
+<!-- =====================
+SEO JSON-LD
+===================== -->
+
+
+<script type="application/ld+json">
+
+{
+
+"@context":"https://schema.org",
+
+"@type":"MusicArtist",
+
+"name":"Anh Tư",
+
+"description":"Ca sĩ Anh Tư - Âm nhạc và hành trình nghệ thuật",
+
+"url":"",
+
+"sameAs":[
+
+"https://youtube.com/@anhtu.singer",
+
+"https://www.facebook.com/share/1BjugcaA9f/?mibextid=wwXIfr"
+
+]
+
+}
+
+</script>
+
+
+
+
+
+
+
+<!-- =====================
+ANIMATION
+===================== -->
+
+
+<script>
+
+
+const reveals =
+document.querySelectorAll(".reveal");
+
+
+
+function revealOnScroll(){
+
+
+reveals.forEach((item)=>{
+
+
+const position =
+item.getBoundingClientRect().top;
+
+
+
+if(position <
+window.innerHeight - 100){
+
+
+item.classList.add("show");
+
+
+}
+
+
+});
+
+
+}
+
+
+
+window.addEventListener(
+"scroll",
+revealOnScroll
+);
+
+
+
+revealOnScroll();
+
+
+
+
+
+
+
+
+// MOBILE MENU
+
+
+const menu =
+document.querySelector(".menu");
+
+
+const nav =
+document.querySelector("nav");
+
+
+
+menu.onclick=function(){
+
+
+if(nav.style.display==="flex"){
+
+
+nav.style.display="none";
+
+
+}
+
+else{
+
+
+nav.style.display="flex";
+
+
+nav.style.flexDirection="column";
+
+
+nav.style.position="absolute";
+
+
+nav.style.top="80px";
+
+
+nav.style.right="30px";
+
+
+nav.style.background="#000";
+
+
+nav.style.padding="30px";
+
+
+nav.style.borderRadius="15px";
+
+
+}
+
+
+};
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+
+</html>
