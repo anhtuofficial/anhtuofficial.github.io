@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ca Sĩ Profile - Official Website</title>
+    <title>Anh Tư Singer - Official Website</title>
     <!-- Font chữ sang trọng từ Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -109,6 +109,7 @@
             font-weight: 600;
             letter-spacing: 1px;
             transition: all 0.3s ease;
+            margin: 5px;
         }
 
         .btn:hover {
@@ -181,7 +182,7 @@
 
         .card img {
             width: 100%;
-            height: 250px;
+            height: 220px;
             object-fit: cover;
             margin-bottom: 15px;
         }
@@ -195,6 +196,25 @@
         .card p {
             color: var(--text-muted);
             font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        /* Phần nhúng Video YouTube */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* Tỷ lệ khung hình 16:9 */
+            height: 0;
+            background: #000;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
 
         /* Liên hệ (Contact) */
@@ -206,8 +226,16 @@
         }
 
         .contact-box p {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             color: var(--text-muted);
+        }
+
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         /* Chân trang (Footer) */
@@ -223,9 +251,9 @@
         /* Tương thích thiết bị di động */
         @media (max-width: 768px) {
             header { padding: 15px 20px; }
-            .nav-links { display: none; } /* Có thể ẩn menu gọn hoặc tùy biến trên mobile */
+            .nav-links { display: none; }
             .bio-content { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 2.5rem; }
+            .hero h1 { font-size: 2.3rem; }
         }
     </style>
 </head>
@@ -233,7 +261,7 @@
 
     <!-- Menu điều hướng -->
     <header>
-        <a href="#" class="logo">ARTIST NAME</a>
+        <a href="#" class="logo">ANH TƯ SINGER</a>
         <ul class="nav-links">
             <li><a href="#about">Tiểu Sử</a></li>
             <li><a href="#music">Sản Phẩm</a></li>
@@ -243,9 +271,12 @@
 
     <!-- Phần mở đầu / Banner -->
     <section class="hero">
-        <h1>Nghệ Sĩ / Ca Sĩ</h1>
+        <h1>Anh Tư Singer</h1>
         <p>Official Website & Portfolio - Đẳng cấp, Âm nhạc và Cảm xúc.</p>
-        <a href="#about" class="btn">Khám Phá Ngay</a>
+        <div>
+            <a href="#music" class="btn">Nghe Nhạc Ngay</a>
+            <a href="https://youtube.com/@anhtu.singer?si=J-jaW-Sgvtx0rwFh" target="_blank" class="btn">Kênh YouTube</a>
+        </div>
     </section>
 
     <!-- Phần Tiểu sử -->
@@ -253,35 +284,29 @@
         <h2 class="section-title">Tiểu Sử</h2>
         <div class="bio-content">
             <div class="bio-text">
-                <p>Sở hữu chất giọng đặc biệt cùng tư duy âm nhạc văn minh, nghệ sĩ đã khẳng định được dấu ấn riêng biệt trong lòng khán giả yêu nhạc Việt Nam qua nhiều thế hệ.</p>
-                <p>Với hành trình nghệ thuật bền bỉ, mỗi sản phẩm âm nhạc ra mắt đều là sự kết tinh giữa tâm huyết, sự chỉn chu và khát vọng mang đến những giá trị nghệ thuật đích thực.</p>
-                <a href="#contact" class="btn" style="margin-top: 10px; font-size: 0.8rem; padding: 10px 20px;">Hợp Tác</a>
+                <p>Chào mừng bạn đến với trang web chính thức của ca sĩ <strong>Anh Tư</strong>. Sở hữu chất giọng đặc biệt và giàu cảm xúc, Anh Tư luôn mang đến những giai điệu sâu lắng chạm đến trái tim người nghe.</p>
+                <p>Theo dõi hành trình nghệ thuật và các sản phẩm âm nhạc mới nhất qua các kênh chính thức bên dưới.</p>
+                <a href="#contact" class="btn" style="font-size: 0.8rem; padding: 10px 20px;">Liên Hệ Booking</a>
             </div>
             <div class="bio-img">
-                <!-- Bạn có thể thay link ảnh này bằng link ảnh thật của bạn trên GitHub -->
-                <img src="https://images.unsplash.com/photo-1526478806334-5fd488fcaabc?auto=format&fit=crop&w=800&q=80" alt="Chân dung nghệ sĩ">
+                <!-- Thay link này bằng file ảnh chân dung của bạn trên GitHub (ví dụ: chan-dung.jpg) -->
+                <img src="https://images.unsplash.com/photo-1526478806334-5fd488fcaabc?auto=format&fit=crop&w=800&q=80" alt="Chân dung Anh Tư Singer">
             </div>
         </div>
     </section>
 
-    <!-- Phần Dự án / Đĩa nhạc nổi bật -->
+    <!-- Phần Sản phẩm & Nhúng Video YouTube -->
     <section id="music">
         <h2 class="section-title">Sản Phẩm Nổi Bật</h2>
-        <div class="grid-container">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=500&q=80" alt="Album 1">
-                <h3>Album Vol. 1</h3>
-                <p>Dấu mốc khởi đầu rực rỡ với các bản hit mang âm hưởng đương đại.</p>
+        <div class="card" style="max-width: 800px; margin: 0 auto;">
+            <h3>Chỉ còn tình yêu - Anh Tư & Nhật Lệ | Đinh Phương Anh</h3>
+            <p>MV chính thức phát hành trên YouTube.</p>
+            <!-- Khung nhúng video YouTube -->
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/u54UZOcwMfM" title="Chỉ còn tình yêu - Anh Tư & Nhật Lệ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=500&q=80" alt="Single mới">
-                <h3>Live Session 2026</h3>
-                <p>Không gian âm nhạc mộc mạc, nơi cảm xúc thăng hoa cùng ban nhạc sống.</p>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=500&q=80" alt="Dự án đặc biệt">
-                <h3>The Concert</h3>
-                <p>Đêm diễn đánh dấu hành trình nghệ thuật với quy mô hoành tráng.</p>
+            <div style="margin-top: 20px;">
+                <a href="https://youtu.be/u54UZOcwMfM?si=BOWLea9f5sasLPlF" target="_blank" class="btn" style="font-size: 0.85rem; padding: 8px 20px;">Xem trực tiếp trên YouTube</a>
             </div>
         </div>
     </section>
@@ -290,15 +315,19 @@
     <section id="contact">
         <h2 class="section-title">Liên Hệ & Đặt Lịch Biểu Diễn</h2>
         <div class="contact-box">
-            <p>Mọi thông tin hợp tác biểu diễn, truyền thông hoặc tài trợ dự án, vui lòng liên hệ:</p>
-            <p><strong>Email:</strong> booking@artistname.com | <strong>Hotline:</strong> (+84) 123 456 789</p>
-            <a href="mailto:booking@artistname.com" class="btn" style="margin-top: 15px;">Gửi Email Hợp Tác</a>
+            <p>Mọi thông tin hợp tác biểu diễn, truyền thông hoặc booking, vui lòng liên hệ:</p>
+            <p><strong>Hotline / Zalo:</strong> <a href="tel:0332023909" style="color: var(--gold-light); text-decoration: none;">0332023909</a></p>
+            
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61591720423172&mibextid=wwXIfr&mibextid=wwXIfr" target="_blank" class="btn">Facebook Fanpage</a>
+                <a href="https://youtube.com/@anhtu.singer?si=J-jaW-Sgvtx0rwFh" target="_blank" class="btn">YouTube Channel</a>
+            </div>
         </div>
     </section>
 
     <!-- Chân trang -->
     <footer>
-        <p>&copy; 2026 Artist Name. All Rights Reserved. Powered by GitHub Pages.</p>
+        <p>&copy; 2026 Anh Tư Singer. All Rights Reserved. Powered by GitHub Pages.</p>
     </footer>
 
 </body>
