@@ -5,59 +5,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Anh Tư Official | Ca sĩ</title>
+<title>Anh Tư Official | Singer</title>
 
-<meta name="description" content="Website chính thức của ca sĩ Anh Tư. Âm nhạc, MV, album, lịch diễn và những câu chuyện nghệ thuật.">
+<meta name="description" content="Website chính thức của ca sĩ Anh Tư">
 
-<meta name="keywords" content="Anh Tư, ca sĩ, âm nhạc, MV, album">
-
-<meta name="author" content="Anh Tư Official">
-
-
-<!-- Open Graph SEO -->
-
-<meta property="og:title" content="Anh Tư Official">
-<meta property="og:description" content="Âm nhạc và hành trình nghệ thuật">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://images.unsplash.com/photo-1506157786151-b8491531f063">
-
-
-<!-- Twitter Card -->
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Anh Tư Official">
-<meta name="twitter:description" content="Official Singer Website">
-
-
-<!-- Google Font -->
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-
-<!-- JSON LD -->
-
-<script type="application/ld+json">
-
-{
- "@context":"https://schema.org",
- "@type":"Person",
- "name":"Anh Tư",
- "jobTitle":"Singer",
- "description":"Ca sĩ Việt Nam",
- "url":"https://example.com"
-}
-
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 
 <style>
-
-
-/* =====================
-RESET
-===================== */
-
 
 *{
 margin:0;
@@ -74,13 +29,9 @@ scroll-behavior:smooth;
 body{
 
 background:#050505;
-color:white;
+color:#fff;
 
-font-family:
-'Inter',
-sans-serif;
-
-overflow-x:hidden;
+font-family:Inter,sans-serif;
 
 }
 
@@ -89,11 +40,10 @@ overflow-x:hidden;
 h1,h2,h3{
 
 font-family:
-'Cormorant Garamond',
+"Cormorant Garamond",
 serif;
 
 }
-
 
 
 a{
@@ -107,31 +57,24 @@ text-decoration:none;
 
 img{
 
-max-width:100%;
+width:100%;
 display:block;
 
 }
 
 
 
-
-/* =====================
-LOADING SCREEN
-===================== */
-
+/* LOADER */
 
 #loader{
 
 position:fixed;
-top:0;
-left:0;
-
-width:100%;
-height:100vh;
+inset:0;
 
 background:#000;
 
 display:flex;
+
 align-items:center;
 justify-content:center;
 
@@ -140,31 +83,32 @@ z-index:9999;
 }
 
 
-.loader-text{
 
-font-size:45px;
-letter-spacing:8px;
+#loader span{
+
+font-size:50px;
+
+letter-spacing:10px;
+
 color:#d4af37;
 
-animation:pulse 1.5s infinite;
+animation:pulse 1s infinite;
 
 }
+
 
 
 @keyframes pulse{
 
 50%{
-opacity:.3;
+opacity:.2;
 }
 
 }
 
 
 
-
-/* =====================
-HEADER
-===================== */
+/* HEADER */
 
 
 header{
@@ -172,13 +116,9 @@ header{
 position:fixed;
 
 top:0;
-left:0;
-
 width:100%;
 
-z-index:1000;
-
-padding:25px 60px;
+padding:25px 7%;
 
 display:flex;
 
@@ -186,25 +126,25 @@ justify-content:space-between;
 
 align-items:center;
 
+z-index:1000;
+
 background:
 linear-gradient(
-180deg,
-rgba(0,0,0,.8),
+#000,
 transparent
 );
 
 }
 
 
+
 .logo{
 
-font-size:32px;
-
-font-weight:700;
-
-letter-spacing:4px;
+font-size:35px;
 
 color:#d4af37;
+
+font-weight:bold;
 
 }
 
@@ -214,7 +154,7 @@ nav{
 
 display:flex;
 
-gap:35px;
+gap:30px;
 
 }
 
@@ -226,11 +166,8 @@ font-size:14px;
 
 text-transform:uppercase;
 
-letter-spacing:2px;
-
-transition:.3s;
-
 }
+
 
 
 nav a:hover{
@@ -241,8 +178,7 @@ color:#d4af37;
 
 
 
-
-.menu-btn{
+.menu{
 
 display:none;
 
@@ -254,9 +190,7 @@ font-size:30px;
 
 
 
-/* =====================
-HERO
-===================== */
+/* HERO */
 
 
 .hero{
@@ -271,42 +205,23 @@ align-items:center;
 
 justify-content:center;
 
-overflow:hidden;
+text-align:center;
 
 }
 
 
 
-.hero video{
-
-position:absolute;
-
-width:100%;
-height:100%;
-
-object-fit:cover;
-
-filter:
-brightness(.35);
-
-}
-
-
-
-.hero::after{
-
-content:"";
+.hero img{
 
 position:absolute;
 
 inset:0;
 
-background:
+height:100%;
 
-linear-gradient(
-transparent,
-#050505
-);
+object-fit:cover;
+
+filter:brightness(.35);
 
 }
 
@@ -318,8 +233,6 @@ position:relative;
 
 z-index:2;
 
-text-align:center;
-
 }
 
 
@@ -328,7 +241,7 @@ text-align:center;
 
 font-size:
 
-clamp(60px,10vw,130px);
+clamp(60px,12vw,140px);
 
 letter-spacing:10px;
 
@@ -338,16 +251,13 @@ letter-spacing:10px;
 
 .hero p{
 
-font-size:22px;
+margin:25px 0;
 
-margin:20px 0 40px;
+font-size:20px;
 
 letter-spacing:4px;
 
-color:#ddd;
-
 }
-
 
 
 
@@ -355,15 +265,13 @@ color:#ddd;
 
 display:inline-block;
 
-padding:15px 40px;
-
-margin:10px;
+padding:15px 35px;
 
 border:1px solid #d4af37;
 
 color:#d4af37;
 
-transition:.4s;
+margin:10px;
 
 }
 
@@ -373,16 +281,15 @@ transition:.4s;
 
 background:#d4af37;
 
-color:black;
+color:#000;
 
 }
 
 
 
 
-/* =====================
-SECTION
-===================== */
+
+/* SECTION */
 
 
 section{
@@ -393,35 +300,32 @@ padding:100px 8%;
 
 
 
-.section-title{
+.title{
 
 text-align:center;
 
 font-size:60px;
 
-margin-bottom:60px;
-
 color:#d4af37;
+
+margin-bottom:50px;
 
 }
 
 
 
 
-/* =====================
-ABOUT
-===================== */
+
+/* ABOUT */
 
 
 .about{
 
 display:grid;
 
-grid-template-columns:
+grid-template-columns:1fr 1fr;
 
-1fr 1fr;
-
-gap:60px;
+gap:50px;
 
 align-items:center;
 
@@ -429,51 +333,33 @@ align-items:center;
 
 
 
-.about img{
-
-border-radius:10px;
-
-}
-
-
-
-
 .about p{
 
 line-height:2;
 
-font-size:18px;
-
 color:#ccc;
+
+font-size:18px;
 
 }
 
 
 
-
-
-/* =====================
-ANIMATION
-===================== */
 
 
 .reveal{
 
 opacity:0;
 
-transform:
+transform:translateY(40px);
 
-translateY(50px);
-
-transition:
-
-1s;
+transition:1s;
 
 }
 
 
 
-.reveal.active{
+.active{
 
 opacity:1;
 
@@ -485,19 +371,7 @@ transform:none;
 
 
 
-/* =====================
-RESPONSIVE
-===================== */
-
-
-@media(max-width:900px){
-
-
-header{
-
-padding:20px;
-
-}
+@media(max-width:800px){
 
 
 nav{
@@ -507,13 +381,11 @@ display:none;
 }
 
 
-
-.menu-btn{
+.menu{
 
 display:block;
 
 }
-
 
 
 .about{
@@ -523,16 +395,7 @@ grid-template-columns:1fr;
 }
 
 
-
-.hero h1{
-
-letter-spacing:3px;
-
 }
-
-
-}
-
 
 </style>
 
@@ -543,19 +406,17 @@ letter-spacing:3px;
 <body>
 
 
-
 <div id="loader">
 
-<div class="loader-text">
+<span>
 AT
-</div>
+</span>
 
 </div>
 
 
 
 <header>
-
 
 <div class="logo">
 AT
@@ -565,25 +426,18 @@ AT
 <nav>
 
 <a href="#home">Trang chủ</a>
-
 <a href="#about">Giới thiệu</a>
-
 <a href="#album">Album</a>
-
 <a href="#music">Âm nhạc</a>
-
 <a href="#mv">MV</a>
-
-<a href="#gallery">Gallery</a>
-
+<a href="#gallery">Ảnh</a>
 <a href="#news">Tin tức</a>
-
 <a href="#contact">Liên hệ</a>
 
 </nav>
 
 
-<div class="menu-btn">
+<div class="menu">
 ☰
 </div>
 
@@ -593,23 +447,13 @@ AT
 
 
 
-
-<!-- HERO -->
-
-
 <section class="hero" id="home">
 
 
-<video autoplay muted loop playsinline>
-
-<source src="https://cdn.coverr.co/videos/coverr-a-man-playing-the-piano-1575/1080p.mp4" type="video/mp4">
-
-</video>
-
+<img src="https://images.unsplash.com/photo-1506157786151-b8491531f063">
 
 
 <div class="hero-content">
-
 
 <h1>
 ANH TƯ
@@ -619,7 +463,6 @@ ANH TƯ
 <p>
 ÂM NHẠC • CẢM XÚC • HÀNH TRÌNH
 </p>
-
 
 
 <a class="btn" href="#music">
@@ -632,7 +475,6 @@ XEM MV
 </a>
 
 
-
 </div>
 
 
@@ -641,39 +483,28 @@ XEM MV
 
 
 
-
-<!-- GIỚI THIỆU -->
-
-
 <section id="about">
 
 
-<h2 class="section-title reveal">
+<h2 class="title reveal">
 Giới thiệu
 </h2>
-
 
 
 <div class="about reveal">
 
 
-<img loading="lazy"
-src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b"
-alt="Singer">
+<img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b">
 
-
-<div>
 
 <p>
 
-Anh Tư là nghệ sĩ theo đuổi phong cách âm nhạc giàu cảm xúc.
-Website chính thức lưu giữ hành trình nghệ thuật,
-những ca khúc, album và khoảnh khắc đáng nhớ trên sân khấu.
+Anh Tư là nghệ sĩ theo đuổi âm nhạc giàu cảm xúc.
+Website lưu giữ hành trình nghệ thuật,
+các sản phẩm âm nhạc,
+hình ảnh sân khấu và những câu chuyện phía sau mỗi ca khúc.
 
 </p>
-
-
-</div>
 
 
 </div>
@@ -687,59 +518,14 @@ những ca khúc, album và khoảnh khắc đáng nhớ trên sân khấu.
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Anh Tư Official | Ca sĩ</title>
+<title>Anh Tư Official | Singer</title>
 
-<meta name="description" content="Website chính thức của ca sĩ Anh Tư. Âm nhạc, MV, album, lịch diễn và những câu chuyện nghệ thuật.">
+<meta name="description" content="Website chính thức của ca sĩ Anh Tư">
 
-<meta name="keywords" content="Anh Tư, ca sĩ, âm nhạc, MV, album">
-
-<meta name="author" content="Anh Tư Official">
-
-
-<!-- Open Graph SEO -->
-
-<meta property="og:title" content="Anh Tư Official">
-<meta property="og:description" content="Âm nhạc và hành trình nghệ thuật">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://images.unsplash.com/photo-1506157786151-b8491531f063">
-
-
-<!-- Twitter Card -->
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Anh Tư Official">
-<meta name="twitter:description" content="Official Singer Website">
-
-
-<!-- Google Font -->
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-
-<!-- JSON LD -->
-
-<script type="application/ld+json">
-
-{
- "@context":"https://schema.org",
- "@type":"Person",
- "name":"Anh Tư",
- "jobTitle":"Singer",
- "description":"Ca sĩ Việt Nam",
- "url":"https://example.com"
-}
-
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 
 <style>
-
-
-/* =====================
-RESET
-===================== */
-
 
 *{
 margin:0;
@@ -756,13 +542,9 @@ scroll-behavior:smooth;
 body{
 
 background:#050505;
-color:white;
+color:#fff;
 
-font-family:
-'Inter',
-sans-serif;
-
-overflow-x:hidden;
+font-family:Inter,sans-serif;
 
 }
 
@@ -771,11 +553,10 @@ overflow-x:hidden;
 h1,h2,h3{
 
 font-family:
-'Cormorant Garamond',
+"Cormorant Garamond",
 serif;
 
 }
-
 
 
 a{
@@ -789,31 +570,24 @@ text-decoration:none;
 
 img{
 
-max-width:100%;
+width:100%;
 display:block;
 
 }
 
 
 
-
-/* =====================
-LOADING SCREEN
-===================== */
-
+/* LOADER */
 
 #loader{
 
 position:fixed;
-top:0;
-left:0;
-
-width:100%;
-height:100vh;
+inset:0;
 
 background:#000;
 
 display:flex;
+
 align-items:center;
 justify-content:center;
 
@@ -822,31 +596,32 @@ z-index:9999;
 }
 
 
-.loader-text{
 
-font-size:45px;
-letter-spacing:8px;
+#loader span{
+
+font-size:50px;
+
+letter-spacing:10px;
+
 color:#d4af37;
 
-animation:pulse 1.5s infinite;
+animation:pulse 1s infinite;
 
 }
+
 
 
 @keyframes pulse{
 
 50%{
-opacity:.3;
+opacity:.2;
 }
 
 }
 
 
 
-
-/* =====================
-HEADER
-===================== */
+/* HEADER */
 
 
 header{
@@ -854,13 +629,9 @@ header{
 position:fixed;
 
 top:0;
-left:0;
-
 width:100%;
 
-z-index:1000;
-
-padding:25px 60px;
+padding:25px 7%;
 
 display:flex;
 
@@ -868,25 +639,25 @@ justify-content:space-between;
 
 align-items:center;
 
+z-index:1000;
+
 background:
 linear-gradient(
-180deg,
-rgba(0,0,0,.8),
+#000,
 transparent
 );
 
 }
 
 
+
 .logo{
 
-font-size:32px;
-
-font-weight:700;
-
-letter-spacing:4px;
+font-size:35px;
 
 color:#d4af37;
+
+font-weight:bold;
 
 }
 
@@ -896,7 +667,7 @@ nav{
 
 display:flex;
 
-gap:35px;
+gap:30px;
 
 }
 
@@ -908,11 +679,8 @@ font-size:14px;
 
 text-transform:uppercase;
 
-letter-spacing:2px;
-
-transition:.3s;
-
 }
+
 
 
 nav a:hover{
@@ -923,8 +691,7 @@ color:#d4af37;
 
 
 
-
-.menu-btn{
+.menu{
 
 display:none;
 
@@ -936,9 +703,7 @@ font-size:30px;
 
 
 
-/* =====================
-HERO
-===================== */
+/* HERO */
 
 
 .hero{
@@ -953,42 +718,23 @@ align-items:center;
 
 justify-content:center;
 
-overflow:hidden;
+text-align:center;
 
 }
 
 
 
-.hero video{
-
-position:absolute;
-
-width:100%;
-height:100%;
-
-object-fit:cover;
-
-filter:
-brightness(.35);
-
-}
-
-
-
-.hero::after{
-
-content:"";
+.hero img{
 
 position:absolute;
 
 inset:0;
 
-background:
+height:100%;
 
-linear-gradient(
-transparent,
-#050505
-);
+object-fit:cover;
+
+filter:brightness(.35);
 
 }
 
@@ -1000,8 +746,6 @@ position:relative;
 
 z-index:2;
 
-text-align:center;
-
 }
 
 
@@ -1010,7 +754,7 @@ text-align:center;
 
 font-size:
 
-clamp(60px,10vw,130px);
+clamp(60px,12vw,140px);
 
 letter-spacing:10px;
 
@@ -1020,16 +764,13 @@ letter-spacing:10px;
 
 .hero p{
 
-font-size:22px;
+margin:25px 0;
 
-margin:20px 0 40px;
+font-size:20px;
 
 letter-spacing:4px;
 
-color:#ddd;
-
 }
-
 
 
 
@@ -1037,15 +778,13 @@ color:#ddd;
 
 display:inline-block;
 
-padding:15px 40px;
-
-margin:10px;
+padding:15px 35px;
 
 border:1px solid #d4af37;
 
 color:#d4af37;
 
-transition:.4s;
+margin:10px;
 
 }
 
@@ -1055,16 +794,15 @@ transition:.4s;
 
 background:#d4af37;
 
-color:black;
+color:#000;
 
 }
 
 
 
 
-/* =====================
-SECTION
-===================== */
+
+/* SECTION */
 
 
 section{
@@ -1075,35 +813,32 @@ padding:100px 8%;
 
 
 
-.section-title{
+.title{
 
 text-align:center;
 
 font-size:60px;
 
-margin-bottom:60px;
-
 color:#d4af37;
+
+margin-bottom:50px;
 
 }
 
 
 
 
-/* =====================
-ABOUT
-===================== */
+
+/* ABOUT */
 
 
 .about{
 
 display:grid;
 
-grid-template-columns:
+grid-template-columns:1fr 1fr;
 
-1fr 1fr;
-
-gap:60px;
+gap:50px;
 
 align-items:center;
 
@@ -1111,51 +846,33 @@ align-items:center;
 
 
 
-.about img{
-
-border-radius:10px;
-
-}
-
-
-
-
 .about p{
 
 line-height:2;
 
-font-size:18px;
-
 color:#ccc;
+
+font-size:18px;
 
 }
 
 
 
-
-
-/* =====================
-ANIMATION
-===================== */
 
 
 .reveal{
 
 opacity:0;
 
-transform:
+transform:translateY(40px);
 
-translateY(50px);
-
-transition:
-
-1s;
+transition:1s;
 
 }
 
 
 
-.reveal.active{
+.active{
 
 opacity:1;
 
@@ -1167,19 +884,7 @@ transform:none;
 
 
 
-/* =====================
-RESPONSIVE
-===================== */
-
-
-@media(max-width:900px){
-
-
-header{
-
-padding:20px;
-
-}
+@media(max-width:800px){
 
 
 nav{
@@ -1189,13 +894,11 @@ display:none;
 }
 
 
-
-.menu-btn{
+.menu{
 
 display:block;
 
 }
-
 
 
 .about{
@@ -1205,16 +908,7 @@ grid-template-columns:1fr;
 }
 
 
-
-.hero h1{
-
-letter-spacing:3px;
-
 }
-
-
-}
-
 
 </style>
 
@@ -1225,19 +919,17 @@ letter-spacing:3px;
 <body>
 
 
-
 <div id="loader">
 
-<div class="loader-text">
+<span>
 AT
-</div>
+</span>
 
 </div>
 
 
 
 <header>
-
 
 <div class="logo">
 AT
@@ -1247,25 +939,18 @@ AT
 <nav>
 
 <a href="#home">Trang chủ</a>
-
 <a href="#about">Giới thiệu</a>
-
 <a href="#album">Album</a>
-
 <a href="#music">Âm nhạc</a>
-
 <a href="#mv">MV</a>
-
-<a href="#gallery">Gallery</a>
-
+<a href="#gallery">Ảnh</a>
 <a href="#news">Tin tức</a>
-
 <a href="#contact">Liên hệ</a>
 
 </nav>
 
 
-<div class="menu-btn">
+<div class="menu">
 ☰
 </div>
 
@@ -1275,23 +960,13 @@ AT
 
 
 
-
-<!-- HERO -->
-
-
 <section class="hero" id="home">
 
 
-<video autoplay muted loop playsinline>
-
-<source src="https://cdn.coverr.co/videos/coverr-a-man-playing-the-piano-1575/1080p.mp4" type="video/mp4">
-
-</video>
-
+<img src="https://images.unsplash.com/photo-1506157786151-b8491531f063">
 
 
 <div class="hero-content">
-
 
 <h1>
 ANH TƯ
@@ -1301,7 +976,6 @@ ANH TƯ
 <p>
 ÂM NHẠC • CẢM XÚC • HÀNH TRÌNH
 </p>
-
 
 
 <a class="btn" href="#music">
@@ -1314,589 +988,39 @@ XEM MV
 </a>
 
 
-
 </div>
 
 
 </section>
 
 
-
-
-
-<!-- GIỚI THIỆU -->
 
 
 <section id="about">
 
 
-<h2 class="section-title reveal">
+<h2 class="title reveal">
 Giới thiệu
 </h2>
-
 
 
 <div class="about reveal">
 
 
-<img loading="lazy"
-src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b"
-alt="Singer">
+<img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b">
 
-
-<div>
 
 <p>
 
-Anh Tư là nghệ sĩ theo đuổi phong cách âm nhạc giàu cảm xúc.
-Website chính thức lưu giữ hành trình nghệ thuật,
-những ca khúc, album và khoảnh khắc đáng nhớ trên sân khấu.
+Anh Tư là nghệ sĩ theo đuổi âm nhạc giàu cảm xúc.
+Website lưu giữ hành trình nghệ thuật,
+các sản phẩm âm nhạc,
+hình ảnh sân khấu và những câu chuyện phía sau mỗi ca khúc.
 
 </p>
-
-
-</div>
 
 
 </div>
 
 
 </section>
-<!-- =====================
-FAN CLUB
-===================== -->
-
-
-<section id="fanclub">
-
-
-<h2 class="section-title reveal">
-Fan Club
-</h2>
-
-
-<div class="player reveal">
-
-
-<h3>
-Gia nhập cộng đồng Anh Tư
-</h3>
-
-
-<p>
-
-Cùng chia sẻ tình yêu âm nhạc,
-cập nhật những dự án mới nhất,
-hậu trường và những khoảnh khắc đặc biệt.
-
-</p>
-
-
-<a class="btn" href="#">
-Tham gia ngay
-</a>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<!-- =====================
-NEWSLETTER
-===================== -->
-
-
-<section>
-
-
-<h2 class="section-title reveal">
-
-Đăng ký nhận tin
-
-</h2>
-
-
-
-<div class="player reveal">
-
-
-<input 
-type="email"
-placeholder="Email của bạn">
-
-
-<button>
-Đăng ký
-</button>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<!-- =====================
-LIÊN HỆ
-===================== -->
-
-
-<section id="contact">
-
-
-<h2 class="section-title reveal">
-
-Liên hệ
-
-</h2>
-
-
-
-<div class="player reveal">
-
-
-<p>
-Booking / Collaboration
-</p>
-
-
-<p>
-Email:
-booking@anhtu.com
-</p>
-
-
-<p>
-Facebook:
-Anh Tư Official
-</p>
-
-
-<p>
-YouTube:
-Anh Tư Music
-</p>
-
-
-
-<form>
-
-
-<input 
-placeholder="Họ tên">
-
-
-<input 
-placeholder="Email">
-
-
-<textarea
-placeholder="Nội dung">
-</textarea>
-
-
-<button>
-Gửi liên hệ
-</button>
-
-
-</form>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<style>
-
-
-input,
-textarea{
-
-width:100%;
-
-padding:15px;
-
-margin:10px 0;
-
-background:#111;
-
-border:
-
-1px solid #333;
-
-color:white;
-
-border-radius:8px;
-
-}
-
-
-
-textarea{
-
-height:150px;
-
-}
-
-
-
-</style>
-
-
-
-
-
-
-
-<!-- =====================
-FOOTER
-===================== -->
-
-
-<footer>
-
-
-<div class="logo">
-
-AT
-
-</div>
-
-
-<p>
-
-© 2026 Anh Tư Official.
-All Rights Reserved.
-
-</p>
-
-
-
-<div>
-
-<a href="#">
-Facebook
-</a>
-
-|
-
-<a href="#">
-YouTube
-</a>
-
-|
-
-<a href="#">
-TikTok
-</a>
-
-</div>
-
-
-
-</footer>
-
-
-
-
-
-
-<!-- BACK TO TOP -->
-
-
-<div id="top">
-
-↑
-
-</div>
-
-
-
-
-
-
-<style>
-
-
-footer{
-
-padding:50px;
-
-text-align:center;
-
-background:#000;
-
-color:#888;
-
-}
-
-
-
-footer .logo{
-
-margin-bottom:20px;
-
-}
-
-
-
-#top{
-
-position:fixed;
-
-right:30px;
-
-bottom:30px;
-
-width:50px;
-
-height:50px;
-
-background:#d4af37;
-
-color:#000;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-border-radius:50%;
-
-cursor:pointer;
-
-opacity:0;
-
-transition:.4s;
-
-}
-
-
-
-#top.show{
-
-opacity:1;
-
-}
-
-
-
-</style>
-
-
-
-
-
-
-<script>
-
-
-// =================
-// LOADING
-// =================
-
-
-window.addEventListener(
-"load",
-()=>{
-
-document
-.getElementById("loader")
-.style.display="none";
-
-});
-
-
-
-
-
-// =================
-// SCROLL REVEAL
-// =================
-
-
-const reveals =
-document.querySelectorAll(".reveal");
-
-
-
-function reveal(){
-
-for(
-let i=0;
-i<reveals.length;
-i++
-){
-
-let windowHeight =
-window.innerHeight;
-
-
-let elementTop =
-reveals[i]
-.getBoundingClientRect()
-.top;
-
-
-
-if(
-elementTop <
-windowHeight - 100
-){
-
-reveals[i]
-.classList
-.add("active");
-
-}
-
-}
-
-
-}
-
-
-window.addEventListener(
-"scroll",
-reveal
-);
-
-
-
-reveal();
-
-
-
-
-
-
-
-// =================
-// BACK TO TOP
-// =================
-
-
-const topBtn =
-document.getElementById("top");
-
-
-
-window.addEventListener(
-"scroll",
-()=>{
-
-
-if(
-window.scrollY > 500
-){
-
-topBtn.classList.add("show");
-
-}
-
-else{
-
-topBtn.classList.remove("show");
-
-}
-
-
-});
-
-
-
-topBtn.onclick=()=>{
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-};
-
-
-
-
-
-
-// =================
-// MOBILE MENU
-// =================
-
-
-const menu =
-document.querySelector(".menu-btn");
-
-
-const nav =
-document.querySelector("nav");
-
-
-
-menu.onclick=()=>{
-
-
-if(
-nav.style.display==="flex"
-){
-
-nav.style.display="none";
-
-}
-
-else{
-
-nav.style.display="flex";
-
-nav.style.flexDirection="column";
-
-nav.style.position="absolute";
-
-nav.style.top="80px";
-
-nav.style.right="20px";
-
-nav.style.background="#000";
-
-nav.style.padding="30px";
-
-}
-
-
-};
-
-
-
-
-
-
-</script>
-
-
-
-
-
-</body>
-
-</html>
