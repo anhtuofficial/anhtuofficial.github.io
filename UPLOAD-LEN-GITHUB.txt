@@ -1,7 +1,0 @@
-BẢN PREMIUM V4
-
-1. Xóa các file website cũ trên GitHub.
-2. Upload toàn bộ nội dung của thư mục này vào ROOT repository.
-3. Bảo đảm index.html nằm ngay thư mục gốc.
-4. Chờ GitHub Pages deploy, sau đó mở tab riêng tư để tránh cache cũ.
-5. index.html đã chứa CSS/JS bên trong nên không bị lỗi giao diện chỉ còn chữ.
