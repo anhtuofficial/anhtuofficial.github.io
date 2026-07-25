@@ -1,0 +1,170 @@
+# WEBSITE CA SĨ ANH TƯ — FULL SOURCE V12
+
+Bộ mã nguồn hoàn chỉnh, chạy trực tiếp bằng trình duyệt và sẵn sàng đưa lên GitHub Pages.
+
+## Cấu trúc
+
+```text
+/
+├── index.html
+├── index-ban-tach-file.html
+├── button-system-demo.html
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+├── images/
+├── music/
+├── videos/
+├── .nojekyll
+├── CNAME.example.txt
+└── README.md
+```
+
+## Nội dung website
+
+- Hero toàn màn hình.
+- Giới thiệu nghệ sĩ.
+- Playlist và bài hát.
+- MV YouTube.
+- Album/release.
+- Thư viện ảnh và lightbox.
+- Tin tức và sự kiện.
+- Contact & Booking 3D.
+- Newsletter.
+- Responsive hoàn chỉnh cho iPhone, tablet và desktop.
+
+## Button Design System
+
+Các nút chính dùng chung hệ thống:
+
+```css
+.ds-btn
+.ds-btn--primary
+.ds-btn--outline
+.ds-btn--glass
+.ds-btn--text
+.ds-btn--sm
+.ds-btn--lg
+.ds-btn--full
+```
+
+Thông số:
+
+- Chiều cao: 48px, 52px, 56px.
+- Bo góc: 16px.
+- Khoảng cách theo 8pt Grid.
+- Transition: 250ms.
+- Icon + Label + Arrow.
+- Gradient cao cấp.
+- Shadow + Glow.
+- Responsive.
+- Trạng thái Default, Hover, Active, Focus, Disabled.
+- Ripple khi nhấn.
+
+Mở `button-system-demo.html` để xem riêng toàn bộ hệ thống nút.
+
+## Thông tin đã tích hợp
+
+- Ca sĩ: Anh Tư
+- Hotline/Zalo: 033.2023.909
+- YouTube: https://youtube.com/@anhtu.singer
+- Facebook: https://www.facebook.com/share/1BjugcaA9f/
+- Chỉ Còn Tình Yêu: https://youtu.be/u54UZOcwMfM
+- Sợ Yêu: https://youtu.be/Wemc37ra_a8
+
+## Thay ảnh
+
+Giữ đúng tên file và chữ hoa `.JPG`:
+
+```text
+images/anh-bia.JPG
+images/chan-dung.JPG
+images/bieu-dien-01.JPG
+images/bieu-dien-02.JPG
+images/phong-thu-01.JPG
+images/doi-thuong-01.JPG
+images/doi-thuong-02.JPG
+images/su-kien-01.JPG
+images/su-kien-02.JPG
+images/bao-chi-01.JPG
+images/bao-chi-02.JPG
+images/og-anh-tu.JPG
+```
+
+## Thay email booking
+
+Tìm chuỗi sau trong `index.html` và `js/script.js`:
+
+```text
+booking.anhtu@example.com
+```
+
+Thay bằng email thật.
+
+## Upload GitHub Pages
+
+1. Giải nén ZIP.
+2. Upload trực tiếp toàn bộ file bên trong lên thư mục gốc repository.
+3. Vào Settings → Pages.
+4. Chọn Deploy from a branch.
+5. Chọn `main` và `/ (root)`.
+6. Lưu và chờ GitHub triển khai.
+
+Không upload cả thư mục cha làm thư mục con.
+
+## Gắn tên miền riêng
+
+- Đổi nội dung `CNAME.example.txt` thành tên miền của bạn.
+- Đổi tên file thành `CNAME`.
+- Khai báo tên miền trong Settings → Pages → Custom domain.
+
+
+## V13 — Luxury Buttons & Contact Logos
+- Nút dùng bảng màu onyx, champagne, ruby và burgundy.
+- Gradient sắc nét, tương phản cao và glow nhẹ.
+- Icon CTA đổi sang SVG nét mảnh cao cấp.
+- Contact chỉ còn nút logo chuyển hướng: Gọi điện, Zalo, Facebook, YouTube, Email.
+- Không hiển thị username hoặc tên tài khoản.
+
+
+## V14 — Luxury Stage Play
+
+- Thay toàn bộ nút phát nhạc bằng nút dạng đĩa sân khấu 3D.
+- Không dùng icon mũi tên trong nút Nghe nhạc.
+- Nút Hero có biểu tượng nốt nhạc, equalizer và ánh sáng chạy ngang.
+- Nút phát có vòng halo xoay, đĩa xoay, lõi champagne và hạt sáng lấp lánh.
+- Background các khu vực âm nhạc được tăng chiều sâu bằng spotlight, sàn sân khấu và gradient chuyển màu.
+- Trên mobile giảm kích thước; khi bật Reduce Motion sẽ tắt animation phụ.
+
+
+## V15 — Stage Atmosphere
+
+Toàn bộ màu nền từng mục đã được nâng cấp thành hệ sân khấu nhiều lớp:
+
+- Gradient loang chuyển màu riêng cho từng section.
+- Spotlight chuyển động.
+- Sương sân khấu có màu.
+- Sàn phản chiếu dạng perspective 3D.
+- Hạt sáng lấp lánh với vị trí và nhịp khác nhau.
+- Đường sáng phân tách giữa các section.
+- Khung tiêu đề và card được nâng nổi bằng nhiều lớp shadow.
+- Ánh bóng chạy qua các card lớn.
+- Parallax theo con trỏ trên desktop.
+- Trên iPhone số hạt sáng được giảm để giữ hiệu năng.
+- Reduce Motion sẽ tắt các animation phụ.
+
+
+## V16 — Luxury Stage Header
+
+- Header nền kính nhiều lớp với onyx, burgundy, violet và champagne.
+- Viền spectrum chuyển màu và ánh bóng quét ngang.
+- Spotlight trong header phản ứng theo vị trí con trỏ.
+- Logo có vòng orbit và hạt sáng.
+- Menu desktop dạng pill nổi có số thứ tự.
+- Tự đánh dấu mục đang xem.
+- Nút phải được đổi thành “Đặt lịch diễn”.
+- Không sử dụng dấu mũi tên.
+- Nút booking dùng icon lịch có ngôi sao và equalizer chuyển động.
+- Có menu mobile toàn màn hình với màu nền sân khấu.
+- Tự tắt animation phụ khi bật Reduce Motion.
