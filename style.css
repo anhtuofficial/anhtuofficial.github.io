@@ -58,7 +58,7 @@ button{color:inherit}
 
 /* Hero */
 .hero{position:relative;min-height:100svh;overflow:hidden;background:var(--wine);color:white}
-.hero__image{position:absolute;inset:0;background:url("images/anh-bia.JPG") center 27%/cover no-repeat;transform:scale(1.04);will-change:transform}
+.hero__image{position:absolute;inset:0;background:url("images/anh-bia.jpg") center 27%/cover no-repeat;transform:scale(1.04);will-change:transform}
 .hero__veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(38,18,29,.9),rgba(38,18,29,.42) 52%,rgba(38,18,29,.2)),linear-gradient(180deg,rgba(0,0,0,.24),transparent 28%,rgba(46,22,35,.1) 57%,var(--wine) 100%)}
 .hero__shape{position:absolute;right:-18vw;top:-20vw;width:65vw;aspect-ratio:1;border:1px solid rgba(255,255,255,.16);border-radius:45% 55% 62% 38%/42% 36% 64% 58%;animation:morph 12s ease-in-out infinite alternate}
 @keyframes morph{to{transform:rotate(18deg) scale(1.08);border-radius:62% 38% 40% 60%/35% 58% 42% 65%}}
