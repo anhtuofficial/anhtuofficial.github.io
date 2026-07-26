@@ -1,0 +1,866 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#07121f">
+  <meta name="site-revision" content="v39-solid-ui-icons-mp3">
+  <title>Anh Tư | Official Artist Website</title>
+  <meta name="description" content="Website chính thức của ca sĩ Anh Tư — âm nhạc, MV, album hình ảnh, sự kiện và booking.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:title" content="Anh Tư | Official Artist Website">
+  <meta property="og:description" content="Chạm vào ký ức bằng những giai điệu chân thành.">
+  <meta property="og:image" content="images/og-anh-tu.JPG">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Sora:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=39">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <div class="page-loader" id="loader"><img class="page-loader__logo" src="images/logo-anh-tu.PNG" alt="Logo Anh Tư"><p>ANH TƯ • OFFICIAL</p></div>
+  <a class="skip-link" href="#main">Đi tới nội dung chính</a>
+
+<header class="header header-v16" id="header">
+    <span class="header-v16__spectrum" aria-hidden="true"></span>
+    <span class="header-v16__shine" aria-hidden="true"></span>
+    <span class="header-v16__spotlight" aria-hidden="true"></span>
+
+    <a class="logo logo-v16" href="#trang-chu" aria-label="Anh Tư — Trang chủ">
+      <span class="logo-v16__orbit" aria-hidden="true"></span>
+      <img class="logo__image" src="images/logo-anh-tu.PNG" alt="Logo Anh Tư">
+      <span class="logo__text">
+        ANH TƯ
+        <small>OFFICIAL ARTIST</small>
+      </span>
+    </a>
+
+    <nav class="nav nav-v16" id="primaryNav" aria-label="Điều hướng chính">
+      <a href="#gioi-thieu"><small>01</small><span>Giới thiệu</span></a>
+      <a href="#am-nhac"><small>02</small><span>Âm nhạc</span></a>
+      <a href="#mv"><small>03</small><span>Visual Video</span></a>
+      <a href="#album"><small>04</small><span>Album</span></a>
+      <a href="#hinh-anh"><small>05</small><span>Hình ảnh</span></a>
+      <a href="#tin-tuc"><small>06</small><span>Tin tức</span></a>
+    </nav>
+
+    <div class="header-v16__right">
+      <span class="header-v16__availability">
+        <i></i>
+        <span>Đang nhận lịch</span>
+      </span>
+
+      <a class="header-booking" href="#lien-he">
+        <span class="header-booking__aura" aria-hidden="true"></span>
+        <span class="header-booking__icon">
+<svg class="header-booking__svg" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="1.65" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true">
+  <rect x="3" y="5" width="18" height="16" rx="3"/>
+  <path d="M16 3v4M8 3v4M3 10h18"/>
+  <path d="m12 13 .7 1.6 1.8.2-1.3 1.2.4 1.8-1.6-.9-1.6.9.4-1.8-1.3-1.2 1.8-.2L12 13Z"/>
+</svg></span>
+        <span class="header-booking__copy">
+          <small>CONTACT</small>
+          <strong>Đặt lịch diễn</strong>
+        </span>
+        <span class="header-booking__bars" aria-hidden="true">
+          <i></i><i></i><i></i>
+        </span>
+      </a>
+
+      <button class="header-menu" id="headerMenu" type="button"
+              aria-label="Mở menu" aria-expanded="false"
+              aria-controls="mobileNav">
+        <span class="header-menu__open">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+     stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+  <path d="M5 7h14M8 12h11M5 17h14"/>
+</svg></span>
+        <span class="header-menu__close">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+     stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+  <path d="m6 6 12 12M18 6 6 18"/>
+</svg></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav-v16" id="mobileNav" aria-label="Điều hướng điện thoại" aria-hidden="true">
+    <span class="mobile-nav-v16__wash" aria-hidden="true"></span>
+    <div class="mobile-nav-v16__head">
+      <span>ANH TƯ</span>
+      <small>OFFICIAL NAVIGATION</small>
+    </div>
+    <div class="mobile-nav-v16__links">
+      <a href="#gioi-thieu"><small>01</small><strong>Giới thiệu</strong></a>
+      <a href="#am-nhac"><small>02</small><strong>Âm nhạc</strong></a>
+      <a href="#mv"><small>03</small><strong>Visual Video</strong></a>
+      <a href="#album"><small>04</small><strong>Album</strong></a>
+      <a href="#hinh-anh"><small>05</small><strong>Hình ảnh</strong></a>
+      <a href="#tin-tuc"><small>06</small><strong>Tin tức</strong></a>
+      <a href="#lien-he"><small>07</small><strong>Liên hệ</strong></a>
+    </div>
+    <div class="mobile-nav-v16__footer">
+      <span><i></i> Đang nhận lịch biểu diễn</span>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="hero" id="trang-chu">
+      <div class="hero__image"></div><div class="hero__veil"></div><div class="hero__shape"></div>
+      <div class="container hero__content">
+        <div class="hero__eyebrow reveal" data-reveal="left"><i></i>VIETNAMESE VOCALIST • OFFICIAL</div>
+        <h1><span class="reveal" data-reveal="left">ANH</span><span class="reveal" data-reveal="right">TƯ</span></h1>
+        <div class="hero__bottom">
+          <p class="hero__quote reveal" data-reveal="up">“Chạm vào ký ức bằng những giai điệu <em>chân thành.</em>”</p>
+          
+<div class="actions hero-tech-actions reveal" data-reveal="right">
+  <!-- THAY href BÊN DƯỚI BẰNG LINK MP3 HOẶC GIỮ #nghe-file -->
+  <a class="hero-tech-btn hero-tech-btn--music"
+     href="#nghe-file"
+     aria-label="Nghe nhạc Anh Tư">
+    <span class="hero-tech-btn__icon" aria-hidden="true">
+      <svg viewBox="0 0 32 32" fill="none">
+        <path d="M11 22.8V8.7l11-2.2v12.9"/>
+        <circle cx="9" cy="23.2" r="3.1"/>
+        <circle cx="20.8" cy="20.7" r="3.1"/>
+      </svg>
+    </span>
+    <span class="hero-tech-btn__copy">
+      <small>DIGITAL AUDIO ACCESS</small>
+      <strong>Nghe nhạc</strong>
+    </span>
+    <span class="hero-tech-btn__eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    
+<span class="lux-forward" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="none">
+    <path d="M7 17L17 7" />
+    <path d="M10 7H17V14" />
+    <circle cx="7.4" cy="16.6" r="1.2" fill="currentColor" stroke="none"/>
+  </svg>
+</span>
+  </a>
+
+  <!-- THAY data-video-id BÊN DƯỚI BẰNG ID VIDEO MỚI NẾU CẦN -->
+  <button class="hero-tech-btn hero-tech-btn--video js-video"
+          type="button"
+          data-video-id="u54UZOcwMfM"
+          aria-label="Xem MV mới của Anh Tư">
+    <span class="hero-tech-btn__icon" aria-hidden="true">
+      <svg viewBox="0 0 32 32" fill="none">
+        <rect x="4.8" y="8.1" width="22.4" height="15.8" rx="5.2"/>
+        <path d="M13.2 12.3L20 16l-6.8 3.7z" fill="currentColor" stroke="none"/>
+      </svg>
+    </span>
+    <span class="hero-tech-btn__copy">
+      <small>MOTION PICTURE</small>
+      <strong>Xem MV mới</strong>
+    </span>
+    <span class="hero-tech-btn__badge" aria-hidden="true">LIVE</span>
+    
+<span class="lux-forward" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="none">
+    <path d="M7 17L17 7" />
+    <path d="M10 7H17V14" />
+    <circle cx="7.4" cy="16.6" r="1.2" fill="currentColor" stroke="none"/>
+  </svg>
+</span>
+  </button>
+</div>
+
+        </div>
+      </div>
+      <a class="hero__scroll" href="#gioi-thieu">KHÁM PHÁ <i></i></a>
+    </section>
+
+    <div class="marquee" aria-hidden="true"><div class="marquee__track">
+      <span>ANH TƯ</span><i>✦</i><span>CHỈ CÒN TÌNH YÊU</span><i>✦</i><span>SỢ YÊU</span><i>✦</i><span>LIVE PERFORMANCE</span><i>✦</i>
+      <span>ANH TƯ</span><i>✦</i><span>CHỈ CÒN TÌNH YÊU</span><i>✦</i><span>SỢ YÊU</span><i>✦</i><span>LIVE PERFORMANCE</span><i>✦</i>
+    </div></div>
+
+    <section class="about section" id="gioi-thieu">
+<div class="container">
+        <div class="section-head">
+          <div><p class="eyebrow reveal" data-reveal="left">ANH TƯ & ÂM NHẠC</p><h2 class="heading reveal" data-reveal="left">Một giọng hát.<br><em>Một câu chuyện.</em></h2></div>
+          <p class="section-head__note reveal" data-reveal="right">Giới thiệu được xây dựng theo nhịp editorial: ảnh lớn, câu chuyện nghệ sĩ và những dấu ấn ngắn gọn.</p>
+        </div>
+        <div class="about__grid">
+          <div class="about__image reveal" data-reveal="left"><img src="images/chan-dung.JPG" alt="Chân dung ca sĩ Anh Tư" loading="lazy"><span class="about__caption">ANH TƯ • PORTRAIT</span></div>
+          <div class="about__text">
+            <blockquote class="reveal" data-reveal="right">“Âm nhạc là nơi những điều chưa thể nói thành lời được cất lên.”</blockquote>
+            <p class="reveal" data-reveal="right">Anh Tư là ca sĩ Việt Nam theo đuổi dòng nhạc giàu cảm xúc, đặt câu chuyện và sự chân thành vào trung tâm của mỗi màn trình diễn.</p>
+            <p class="reveal" data-reveal="right">Từ Pop Ballad, trữ tình đến contemporary, Anh Tư hướng tới hình ảnh một nghệ sĩ hiện đại, chỉn chu nhưng vẫn gần gũi với người nghe.</p>
+            <div class="about__facts about__facts--icons reveal" data-reveal="up">
+  <article>
+    <strong class="about-fact-icon" aria-hidden="true">
+      <svg viewBox="0 0 48 48" fill="none">
+        <path d="M18 34V14l18-4v19"/>
+        <circle cx="13.5" cy="34.5" r="6.5"/>
+        <circle cx="31.5" cy="29.5" r="6.5"/>
+        <path d="M18 19l18-4"/>
+      </svg>
+    </strong>
+    <span>Ca khúc nổi bật</span>
+  </article>
+
+  <article>
+    <strong class="about-fact-icon" aria-hidden="true">
+      <svg viewBox="0 0 48 48" fill="none">
+        <rect x="17" y="7" width="14" height="24" rx="7"/>
+        <path d="M11 23a13 13 0 0 0 26 0"/>
+        <path d="M24 36v7"/>
+        <path d="M17 43h14"/>
+        <path d="M20 14h8M20 19h8M20 24h8"/>
+      </svg>
+    </strong>
+    <span>Kênh chính thức</span>
+  </article>
+
+  <article>
+    <strong class="about-fact-icon" aria-hidden="true">
+      <svg viewBox="0 0 48 48" fill="none">
+        <path d="M17 8h14v8c0 7.7-3 13-7 13s-7-5.3-7-13V8Z"/>
+        <path d="M17 12H9v4c0 6 4 10 10 10"/>
+        <path d="M31 12h8v4c0 6-4 10-10 10"/>
+        <path d="M24 29v8"/>
+        <path d="M16 42h16"/>
+        <path d="M19 37h10"/>
+      </svg>
+    </strong>
+    <span>Dấu ấn âm nhạc</span>
+  </article>
+</div>
+            <a class="text-link reveal" data-reveal="up" href="https://youtube.com/@anhtu.singer?si=0LS_VZOnsgvDQR4O" target="_blank" rel="noopener noreferrer">Theo dõi hành trình <i>↗</i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="music section" id="am-nhac">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow reveal" data-reveal="left">PLAYLIST</p>
+            <h2 class="heading reveal" data-reveal="left">Nghe Anh Tư <em>ở đây.</em></h2>
+          </div>
+          <p class="section-head__note reveal" data-reveal="right">
+            Playlist chính thức với ảnh đại diện có thể tự thay trong thư mục images.
+          </p>
+        </div>
+
+        <div class="playlist-shell">
+          <div class="playlist-cover reveal"
+               data-reveal="left"
+               style="--playlist-poster-position:center center;">
+            <img class="playlist-poster"
+                 src="images/playlist-cover.JPG"
+                 data-youtube-fallback="https://i.ytimg.com/vi/u54UZOcwMfM/maxresdefault.jpg"
+                 onerror="this.onerror=null;this.src=this.dataset.youtubeFallback"
+                 alt="Ảnh đại diện playlist Anh Tư"
+                 loading="lazy">
+            <button class="stage-play stage-play--hero js-video"
+                    type="button"
+                    data-video-id="u54UZOcwMfM"
+                    aria-label="Phát Chỉ Còn Tình Yêu">
+              <span class="stage-play__halo" aria-hidden="true"></span>
+              <span class="stage-play__disc" aria-hidden="true"></span>
+              <span class="stage-play__core">
+                <svg class="stage-play__svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M9.5 7.6 17 12l-7.5 4.4V7.6Z" fill="currentColor"/>
+                </svg>
+              </span>
+              <span class="stage-play__sparkles" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            </button>
+          </div>
+
+          <div class="playlist__meta reveal" data-reveal="right">
+            <small>OFFICIAL PLAYLIST</small>
+            <h3>Những bản tình ca<br>của Anh Tư</h3>
+
+            <div class="song-row" style="--song-poster-position:center center;">
+              <span>01</span>
+              <img class="song-row__poster"
+                   src="images/playlist-song-01.JPG"
+                   data-youtube-fallback="https://i.ytimg.com/vi/u54UZOcwMfM/hqdefault.jpg"
+                   onerror="this.onerror=null;this.src=this.dataset.youtubeFallback"
+                   alt="Ảnh đại diện Chỉ Còn Tình Yêu"
+                   loading="lazy">
+              <div>
+                <h4>Chỉ Còn Tình Yêu</h4>
+                <p>Anh Tư • Official Video</p>
+              </div>
+              <button class="stage-play stage-play--mini js-video"
+                      type="button"
+                      data-video-id="u54UZOcwMfM"
+                      aria-label="Phát Chỉ Còn Tình Yêu">
+                <span class="stage-play__disc" aria-hidden="true"></span>
+                <span class="stage-play__core">
+                  <svg class="stage-play__svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M9.5 7.6 17 12l-7.5 4.4V7.6Z" fill="currentColor"/>
+                  </svg>
+                </span>
+              </button>
+            </div>
+
+            <div class="song-row" style="--song-poster-position:center center;">
+              <span>02</span>
+              <img class="song-row__poster"
+                   src="images/playlist-song-02.JPG"
+                   data-youtube-fallback="https://i.ytimg.com/vi/Wemc37ra_a8/hqdefault.jpg"
+                   onerror="this.onerror=null;this.src=this.dataset.youtubeFallback"
+                   alt="Ảnh đại diện Sợ Yêu"
+                   loading="lazy">
+              <div>
+                <h4>Sợ Yêu</h4>
+                <p>Anh Tư • Official Video</p>
+              </div>
+              <button class="stage-play stage-play--mini js-video"
+                      type="button"
+                      data-video-id="Wemc37ra_a8"
+                      aria-label="Phát Sợ Yêu">
+                <span class="stage-play__disc" aria-hidden="true"></span>
+                <span class="stage-play__core">
+                  <svg class="stage-play__svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M9.5 7.6 17 12l-7.5 4.4V7.6Z" fill="currentColor"/>
+                  </svg>
+                </span>
+              </button>
+            </div>
+
+            <a class="text-link"
+               href="https://youtube.com/@anhtu.singer?si=0LS_VZOnsgvDQR4O"
+               target="_blank"
+               rel="noopener noreferrer">
+              Xem toàn bộ trên YouTube <i>↗</i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+<section class="audio-file section audio-v37" id="nghe-file">
+  <div class="container">
+    <div class="section-head audio-v37__head">
+      <div>
+        <p class="eyebrow reveal" data-reveal="left">PREMIUM AUDIO PLAYER</p>
+        <h2 class="heading reveal" data-reveal="left">Trạm nghe nhạc <em>Anh Tư.</em></h2>
+      </div>
+      <p class="section-head__note reveal" data-reveal="right">
+        Phát trực tiếp MP3 hoặc WAV. Có thể thay file mặc định hoặc chọn file từ thiết bị để nghe thử.
+      </p>
+    </div>
+
+    <div class="audio-v37__deck reveal" data-reveal="up" data-premium-player>
+      <div class="audio-v37__visual">
+        <div class="audio-v37__ambient" aria-hidden="true"></div>
+
+        <div class="audio-v37__record-wrap">
+          <div class="audio-v37__record">
+            <div class="audio-v37__grooves" aria-hidden="true"></div>
+            <div class="audio-v37__label">
+              <img src="images/audio-cover.PNG" alt="Ảnh đại diện bài hát Anh Tư" loading="lazy">
+            </div>
+            <span class="audio-v37__spindle" aria-hidden="true"></span>
+          </div>
+        </div>
+
+        <div class="audio-v37__now">
+          <span class="audio-v37__status" data-player-status>READY TO PLAY</span>
+          <h3 data-player-title>Private Audio Session</h3>
+          <p>ANH TƯ • OFFICIAL AUDIO</p>
+        </div>
+      </div>
+
+      <div class="audio-v37__console">
+        <audio class="audio-v37__audio" preload="metadata">
+          <source src="music/anh-tu-demo.mp3" type="audio/mpeg">
+          <source src="music/anh-tu-demo.wav" type="audio/wav">
+        </audio>
+
+        <div class="audio-v37__topline">
+          <span>LOSSLESS / LOCAL FILE</span>
+          <span data-player-format>MP3 / WAV</span>
+        </div>
+
+        <div class="audio-v37__wave" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          <i></i><i></i><i></i><i></i>
+        </div>
+
+        <div class="audio-v37__timeline">
+          <span data-player-current>00:00</span>
+          <input type="range" min="0" max="100" value="0" step="0.1"
+                 data-player-seek aria-label="Tiến trình bài hát">
+          <span data-player-duration>00:00</span>
+        </div>
+
+        <div class="audio-v37__controls">
+          <button class="audio-v37__ghost" type="button" data-player-restart aria-label="Phát lại từ đầu">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7.5 8H3.8V4.3"/>
+              <path d="M4.2 8.1A8.3 8.3 0 1 1 4.7 17"/>
+            </svg>
+          </button>
+
+          <button class="audio-v37__play" type="button" data-player-toggle aria-label="Phát hoặc tạm dừng">
+            <span class="audio-v37__play-icon audio-v37__play-icon--play" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M8.3 6.7 17.4 12l-9.1 5.3V6.7Z" fill="currentColor"/>
+              </svg>
+            </span>
+            <span class="audio-v37__play-icon audio-v37__play-icon--pause" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="7" y="6" width="3.4" height="12" rx="1.2" fill="currentColor"/>
+                <rect x="13.6" y="6" width="3.4" height="12" rx="1.2" fill="currentColor"/>
+              </svg>
+            </span>
+          </button>
+
+          <label class="audio-v37__upload">
+            <input type="file" accept=".mp3,.wav,audio/mpeg,audio/wav" data-player-file>
+            <span>Chọn MP3 / WAV</span>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 16V5"/>
+              <path d="m8 9 4-4 4 4"/>
+              <path d="M5 15v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3"/>
+            </svg>
+          </label>
+        </div>
+
+        <div class="audio-v37__volume">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 10v4h4l5 4V6l-5 4H4Z"/>
+            <path d="M17 9.5a4 4 0 0 1 0 5"/>
+          </svg>
+          <input type="range" min="0" max="1" value="0.82" step="0.01"
+                 data-player-volume aria-label="Âm lượng">
+        </div>
+
+        <p class="audio-v37__hint">
+          File mặc định: <code>music/anh-tu-demo.mp3</code> hoặc <code>music/anh-tu-demo.wav</code> · Ảnh đĩa:
+          <code>images/audio-cover.PNG</code>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <section class="videos section" id="mv">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow reveal" data-reveal="left">VISUAL VIDEO</p>
+          <h2 class="heading reveal" data-reveal="left">Visual <em>Video.</em></h2>
+        </div>
+        <p class="section-head__note reveal" data-reveal="right">
+          Hai lát cắt hình ảnh mới của Anh Tư, được trình bày cân đối trên máy tính và căn giữa trên điện thoại.
+        </p>
+      </div>
+
+      <div class="drag-track visual-video-grid">
+        <article class="video-card video-card--landscape drag-card reveal" data-reveal="right" style="--poster-position:center 35%;">
+          <img class="video-card__thumb"
+            src="images/video-visual-01.JPG"
+            data-youtube-fallback="https://i.ytimg.com/vi/EpMC7dnDznc/maxresdefault.jpg"
+            onerror="this.onerror=null;this.src=this.dataset.youtubeFallback"
+            alt="Ảnh đại diện Visual Video 01 của Anh Tư"
+            loading="lazy">
+          <span class="video-card__tag">VISUAL / 01</span>
+          <button class="stage-play stage-play--video js-video" type="button"
+                  data-video-id="EpMC7dnDznc" aria-label="Phát Visual Video 01">
+            <span class="stage-play__halo" aria-hidden="true"></span>
+            <span class="stage-play__disc" aria-hidden="true"></span>
+            <span class="stage-play__core">
+              <svg class="stage-play__svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M9.5 7.6 17 12l-7.5 4.4V7.6Z" fill="currentColor"/>
+              </svg>
+            </span>
+            <span class="stage-play__sparkles" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          </button>
+          <div class="video-card__title">
+            <small>ANH TƯ</small>
+            <strong>Visual Video 01</strong>
+          </div>
+        </article>
+
+        <article class="video-card video-card--short drag-card reveal" data-reveal="right" style="--poster-position:center center;">
+          <img class="video-card__thumb"
+            src="images/video-visual-02.JPG"
+            data-youtube-fallback="https://i.ytimg.com/vi/30843sPlVsA/hqdefault.jpg"
+            onerror="this.onerror=null;this.src=this.dataset.youtubeFallback"
+            alt="Ảnh đại diện Visual Short 02 của Anh Tư"
+            loading="lazy">
+          <span class="video-card__tag">SHORT / 02</span>
+          <button class="stage-play stage-play--video js-video" type="button"
+                  data-video-id="30843sPlVsA" aria-label="Phát Visual Short 02">
+            <span class="stage-play__halo" aria-hidden="true"></span>
+            <span class="stage-play__disc" aria-hidden="true"></span>
+            <span class="stage-play__core">
+              <svg class="stage-play__svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M9.5 7.6 17 12l-7.5 4.4V7.6Z" fill="currentColor"/>
+              </svg>
+            </span>
+            <span class="stage-play__sparkles" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          </button>
+          <div class="video-card__title">
+            <small>ANH TƯ</small>
+            <strong>Visual Short 02</strong>
+          </div>
+        </article>
+      </div>
+    </section>
+
+<section class="albums section" id="album">
+      <div class="container section-head">
+        <div>
+          <p class="eyebrow reveal" data-reveal="left">ALBUM / RELEASES</p>
+          <h2 class="heading reveal" data-reveal="left">Tuyển tập<br><em>phát hành.</em></h2>
+        </div>
+        <div>
+          <p class="section-head__note reveal" data-reveal="right">
+            Mỗi thẻ phát hành dùng ảnh đại diện riêng, có thể thay trực tiếp trong thư mục images.
+          </p>
+          <p class="drag-hint"><i></i> SWIPE / DRAG</p>
+        </div>
+      </div>
+
+      <div class="drag-track releases-track">
+        <article class="album-card drag-card reveal"
+                 data-reveal="right"
+                 style="--release-poster-position:center center;">
+          <div class="album-card__cover">
+            <img class="release-poster"
+                 src="images/release-01.JPG"
+                 data-youtube-fallback="https://i.ytimg.com/vi/u54UZOcwMfM/hqdefault.jpg"
+                 onerror="this.onerror=null;this.src=this.dataset.youtubeFallback"
+                 alt="Ảnh đại diện Chỉ Còn Tình Yêu"
+                 loading="lazy">
+            <button class="release-play js-video"
+                    type="button"
+                    data-video-id="u54UZOcwMfM"
+                    aria-label="Xem Chỉ Còn Tình Yêu">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="m9 7.5 7.5 4.5L9 16.5v-9Z" fill="currentColor"/>
+              </svg>
+            </button>
+          </div>
+          <h3>Chỉ Còn Tình Yêu</h3>
+          <p>Single • Official Video</p>
+        </article>
+
+        <article class="album-card drag-card reveal"
+                 data-reveal="right"
+                 style="--release-poster-position:center center;">
+          <div class="album-card__cover">
+            <img class="release-poster"
+                 src="images/release-02.JPG"
+                 data-youtube-fallback="https://i.ytimg.com/vi/Wemc37ra_a8/hqdefault.jpg"
+                 onerror="this.onerror=null;this.src=this.dataset.youtubeFallback"
+                 alt="Ảnh đại diện Sợ Yêu"
+                 loading="lazy">
+            <button class="release-play js-video"
+                    type="button"
+                    data-video-id="Wemc37ra_a8"
+                    aria-label="Xem Sợ Yêu">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="m9 7.5 7.5 4.5L9 16.5v-9Z" fill="currentColor"/>
+              </svg>
+            </button>
+          </div>
+          <h3>Sợ Yêu</h3>
+          <p>Single • Official Video</p>
+        </article>
+
+        <article class="album-card drag-card reveal"
+                 data-reveal="right"
+                 style="--release-poster-position:center center;">
+          <div class="album-card__cover">
+            <img class="release-poster"
+                 src="images/release-03.JPG"
+                 alt="Ảnh đại diện Chương mới"
+                 loading="lazy">
+          </div>
+          <h3>Chương mới</h3>
+          <p>Coming soon • Placeholder</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="gallery section" id="hinh-anh">
+<div class="container">
+        <div class="section-head"><div><p class="eyebrow reveal" data-reveal="left">HÌNH ẢNH</p><h2 class="heading reveal" data-reveal="left">Những khoảnh khắc<br><em>đáng nhớ.</em></h2></div><p class="section-head__note reveal" data-reveal="right">Lưới ảnh bất đối xứng, bo góc mềm và tự thích nghi trên từng kích thước màn hình.</p></div>
+        <div class="gallery-grid">
+          <button class="gallery-item reveal" data-reveal="left" data-src="images/bieu-dien-01.JPG" data-caption="Anh Tư trên sân khấu"><img src="images/bieu-dien-01.JPG" alt="Anh Tư trên sân khấu" loading="lazy"><span>BIỂU DIỄN</span></button>
+          <button class="gallery-item reveal" data-reveal="up" data-src="images/phong-thu-01.JPG" data-caption="Anh Tư tại phòng thu"><img src="images/phong-thu-01.JPG" alt="Anh Tư tại phòng thu" loading="lazy"><span>STUDIO</span></button>
+          <button class="gallery-item reveal" data-reveal="right" data-src="images/doi-thuong-01.JPG" data-caption="Khoảnh khắc đời thường"><img src="images/doi-thuong-01.JPG" alt="Khoảnh khắc đời thường" loading="lazy"><span>ĐỜI THƯỜNG</span></button>
+          <button class="gallery-item reveal" data-reveal="left" data-src="images/bieu-dien-02.JPG" data-caption="Đêm diễn cùng Anh Tư"><img src="images/bieu-dien-02.JPG" alt="Đêm diễn cùng Anh Tư" loading="lazy"><span>LIVE</span></button>
+          <button class="gallery-item reveal" data-reveal="right" data-src="images/doi-thuong-02.JPG" data-caption="Phía sau sân khấu"><img src="images/doi-thuong-02.JPG" alt="Phía sau sân khấu" loading="lazy"><span>BEHIND THE SCENES</span></button>
+        </div>
+      </div>
+    </section>
+
+    
+<section class="news section" id="tin-tuc">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal" data-reveal="left">TIN TỨC &amp; BÁO CHÍ</p>
+        <h2 class="heading reveal" data-reveal="left">Truyền thông<br><em>nổi bật.</em></h2>
+      </div>
+      <p class="section-head__note reveal" data-reveal="right">
+        Đã gắn trực tiếp các bài báo bạn cung cấp, mở liên kết ra trang mới.
+      </p>
+    </div>
+
+    <div class="news-layout">
+      <article class="news-feature reveal" data-reveal="left">
+        <img src="images/su-kien-01.JPG" alt="Bài báo nổi bật" loading="lazy">
+        <div class="news-feature__body">
+          <small>BÁO MỚI • FEATURED</small>
+          <h3>Đinh Phương Anh nhìn lại 15 năm sáng tác trong đêm nhạc đầu tiên</h3>
+          <a class="text-link text-link--luxury"
+             href="https://baomoi.com/dinh-phuong-anh-nhin-lai-15-nam-sang-tac-trong-dem-nhac-dau-tien-c55670337.epi"
+             target="_blank" rel="noopener noreferrer">Đọc bài viết 
+<span class="lux-forward" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="none">
+    <path d="M7 17L17 7" />
+    <path d="M10 7H17V14" />
+    <circle cx="7.4" cy="16.6" r="1.2" fill="currentColor" stroke="none"/>
+  </svg>
+</span></a>
+        </div>
+      </article>
+
+      <div class="news-list">
+        <a class="news-item reveal" data-reveal="right"
+           href="https://anninhthudo.vn/noi-ay-tinh-yeu-danh-dau-15-nam-sang-tac-cua-dinh-phuong-anh-post660520.antd"
+           target="_blank" rel="noopener noreferrer">
+          <img src="images/bao-chi-01.JPG" alt="An Ninh Thủ Đô" loading="lazy">
+          <div>
+            <small>AN NINH THỦ ĐÔ</small>
+            <h4>Nơi ấy tình yêu đánh dấu 15 năm sáng tác của Đinh Phương Anh</h4>
+          </div>
+          
+<span class="lux-forward" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="none">
+    <path d="M7 17L17 7" />
+    <path d="M10 7H17V14" />
+    <circle cx="7.4" cy="16.6" r="1.2" fill="currentColor" stroke="none"/>
+  </svg>
+</span>
+        </a>
+
+        <a class="news-item reveal" data-reveal="right"
+           href="https://vanhoavaphattrien.vn/dinh-phuong-anh-nhin-lai-15-nam-sang-tac-trong-dem-nhac-dau-tien-a34294.html"
+           target="_blank" rel="noopener noreferrer">
+          <img src="images/bao-chi-02.JPG" alt="Văn Hoá Và Phát Triển" loading="lazy">
+          <div>
+            <small>VĂN HOÁ &amp; PHÁT TRIỂN</small>
+            <h4>Đinh Phương Anh nhìn lại 15 năm sáng tác trong đêm nhạc đầu tiên</h4>
+          </div>
+          
+<span class="lux-forward" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="none">
+    <path d="M7 17L17 7" />
+    <path d="M10 7H17V14" />
+    <circle cx="7.4" cy="16.6" r="1.2" fill="currentColor" stroke="none"/>
+  </svg>
+</span>
+        </a>
+
+        <a class="news-item reveal" data-reveal="right"
+           href="https://giadinhmoi.vn/dinh-phuong-anh-ke-hanh-trinh-15-nam-sang-tac-qua-noi-ay-tinh-yeu-d99479.html"
+           target="_blank" rel="noopener noreferrer">
+          <img src="images/su-kien-02.JPG" alt="Gia Đình Mới" loading="lazy">
+          <div>
+            <small>GIA ĐÌNH MỚI</small>
+            <h4>Đinh Phương Anh kể hành trình 15 năm sáng tác qua “Nơi ấy tình yêu”</h4>
+          </div>
+          
+<span class="lux-forward" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="none">
+    <path d="M7 17L17 7" />
+    <path d="M10 7H17V14" />
+    <circle cx="7.4" cy="16.6" r="1.2" fill="currentColor" stroke="none"/>
+  </svg>
+</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    
+
+<section class="contact section contact-v36 contact-v39" id="lien-he">
+  <div class="container contact-v36__container">
+    <div class="contact-v36__head">
+      <div>
+        <p class="eyebrow reveal" data-reveal="left">CONTACT &amp; BOOKING</p>
+        <h2 class="heading reveal" data-reveal="left">Kết nối cùng <em>Anh Tư.</em></h2>
+      </div>
+      <p class="contact-v36__note reveal" data-reveal="right">
+        Chọn kênh liên hệ chính thức để booking, hợp tác hoặc trao đổi truyền thông.
+      </p>
+    </div>
+
+    <div class="contact-v36__grid reveal" data-reveal="up">
+      <a class="contact-v36__tile" href="tel:+84332023909" aria-label="Gọi điện cho Anh Tư">
+        <span class="contact-v36__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M10.2 5.8 13 5.1c.8-.2 1.7.3 2 1.1l1.1 4.1c.2.7 0 1.4-.6 1.9l-2 1.6a18.8 18.8 0 0 0 4.7 4.7l1.6-2c.5-.6 1.2-.8 1.9-.6l4.1 1.1c.8.2 1.3 1.1 1.1 2l-.7 2.8c-.3 1.3-1.5 2.2-2.9 2.2C14.8 24 8 17.2 8 8.7c0-1.4.9-2.6 2.2-2.9Z"/>
+          </svg>
+        </span>
+        <small>BOOKING TRỰC TIẾP</small>
+        <strong>Gọi điện</strong>
+        <span class="contact-v39__value">033 2023 909</span>
+        
+<span class="lux-forward" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="none">
+    <path d="M7 17L17 7"/>
+    <path d="M10 7H17V14"/>
+    <circle cx="7.4" cy="16.6" r="1.2" fill="currentColor" stroke="none"/>
+  </svg>
+</span>
+      </a>
+
+      <a class="contact-v36__tile contact-v36__tile--zalo"
+         href="https://zalo.me/0332023909"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Nhắn Zalo cho Anh Tư">
+        <span class="contact-v36__icon contact-v36__icon--zalo" aria-hidden="true">
+          <img src="images/zalo-logo.svg" alt="">
+        </span>
+        <small>TIN NHẮN NHANH</small>
+        <strong>Zalo</strong>
+        <span class="contact-v39__value">033 2023 909</span>
+        
+<span class="lux-forward" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="none">
+    <path d="M7 17L17 7"/>
+    <path d="M10 7H17V14"/>
+    <circle cx="7.4" cy="16.6" r="1.2" fill="currentColor" stroke="none"/>
+  </svg>
+</span>
+      </a>
+
+      <a class="contact-v36__tile"
+         href="https://www.facebook.com/share/1BjugcaA9f/?mibextid=wwXIfr"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Facebook chính thức">
+        <span class="contact-v36__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M18.5 27V17.2h3.3l.5-3.8h-3.8V11c0-1.1.3-1.9 1.9-1.9h2V5.7c-.4 0-1.7-.2-3-.2-3 0-5 1.8-5 5.2v2.7H11v3.8h3.4V27"/>
+          </svg>
+        </span>
+        <small>FANPAGE CHÍNH THỨC</small>
+        <strong>Facebook</strong>
+        <span class="contact-v39__value">Anh Tư Official</span>
+        
+<span class="lux-forward" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="none">
+    <path d="M7 17L17 7"/>
+    <path d="M10 7H17V14"/>
+    <circle cx="7.4" cy="16.6" r="1.2" fill="currentColor" stroke="none"/>
+  </svg>
+</span>
+      </a>
+
+      <a class="contact-v36__tile"
+         href="https://youtube.com/@anhtu.singer?si=0LS_VZOnsgvDQR4O"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="YouTube chính thức">
+        <span class="contact-v36__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <rect x="4.5" y="8.5" width="23" height="15" rx="5"/>
+            <path d="m14 12.8 6 3.7-6 3.7v-7.4Z"/>
+          </svg>
+        </span>
+        <small>VIDEO &amp; ÂM NHẠC</small>
+        <strong>YouTube</strong>
+        <span class="contact-v39__value">@anhtu.singer</span>
+        
+<span class="lux-forward" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="none">
+    <path d="M7 17L17 7"/>
+    <path d="M10 7H17V14"/>
+    <circle cx="7.4" cy="16.6" r="1.2" fill="currentColor" stroke="none"/>
+  </svg>
+</span>
+      </a>
+
+      <a class="contact-v36__tile contact-v36__tile--gmail"
+         href="mailto:booking.anhtu@gmail.com"
+         aria-label="Gửi Gmail booking cho Anh Tư">
+        <span class="contact-v36__icon contact-v36__icon--gmail" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <rect x="5" y="7.5" width="22" height="17" rx="4"/>
+            <path d="m7.5 10 8.5 6.5 8.5-6.5"/>
+            <path d="M7 21V11"/>
+            <path d="M25 21V11"/>
+          </svg>
+        </span>
+        <small>GMAIL BOOKING</small>
+        <strong>Gmail</strong>
+        <span class="contact-v39__value">booking.anhtu@gmail.com</span>
+        
+<span class="lux-forward" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="none">
+    <path d="M7 17L17 7"/>
+    <path d="M10 7H17V14"/>
+    <circle cx="7.4" cy="16.6" r="1.2" fill="currentColor" stroke="none"/>
+  </svg>
+</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+</main>
+
+  <footer class="footer footer-v33">
+    <div class="container footer-v33__inner">
+      <a class="footer-v33__brand" href="#trang-chu" aria-label="Về đầu trang">
+        <img class="footer-v33__logo-image" src="images/logo-anh-tu.PNG" alt="Logo Anh Tư">
+        <span><strong>ANH TƯ</strong><small>OFFICIAL</small></span>
+      </a>
+
+      <p class="footer-v33__copyright">
+        © <b id="year"></b> ANH TƯ. MUSIC • LIVE • VIETNAM
+      </p>
+
+      <nav class="footer-v33__links" aria-label="Mạng xã hội">
+        <a href="https://youtube.com/@anhtu.singer?si=0LS_VZOnsgvDQR4O"
+           target="_blank" rel="noopener noreferrer">YT</a>
+        <a href="https://www.facebook.com/share/1BjugcaA9f/?mibextid=wwXIfr"
+           target="_blank" rel="noopener noreferrer">FB</a>
+        <a href="https://zalo.me/0332023909"
+           target="_blank" rel="noopener noreferrer">ZA</a>
+      </nav>
+    </div>
+  </footer>
+
+<button class="back-top" id="backTop" aria-label="Lên đầu trang">↑</button>
+
+  <div class="modal" id="videoModal" aria-hidden="true"><button class="modal__backdrop" data-close-video aria-label="Đóng"></button><div class="modal__panel"><button class="modal__close" data-close-video>×</button><div class="modal__video" id="videoFrame"></div></div></div>
+  <div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox__backdrop" data-close-lightbox aria-label="Đóng"></button><figure><button class="lightbox__close" data-close-lightbox>×</button><img id="lightboxImage" src="" alt=""><figcaption id="lightboxCaption"></figcaption></figure></div>
+    <script src="js/script.js" defer></script>
+</body>
+</html>
