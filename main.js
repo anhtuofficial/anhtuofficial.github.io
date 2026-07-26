@@ -1,1 +1,0 @@
-console.log("Anh Tu V5 loaded");
