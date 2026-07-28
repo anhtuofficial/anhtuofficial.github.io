@@ -8220,6 +8220,25 @@ body *:not(.hero__image)::after{
     line-height: 1.4 !important;
   }
 }
+
+/* Thanh âm lượng hoạt động tốt hơn trên màn hình cảm ứng */
+.audio-v37__volume input[type="range"],
+.audio-dock__volume input[type="range"] {
+  position: relative;
+  z-index: 10;
+  pointer-events: auto !important;
+  touch-action: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Tăng vùng chạm trên điện thoại */
+@media (max-width: 767px) {
+  .audio-v37__volume input[type="range"],
+  .audio-dock__volume input[type="range"] {
+    min-height: 32px;
+  }
+}
 </style>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10374,9 +10393,146 @@ document.querySelectorAll(".section,.hero").forEach(el=>{
         updatePlayer();
       });
 
-      volume?.addEventListener("input", () => {
-        audio.volume = Number(volume.value);
-      });
+      /* =====================================================
+   ĐIỀU KHIỂN ÂM LƯỢNG TRÊN IPHONE / SAFARI
+   ===================================================== */
+
+/* Nhận thanh âm lượng trong Audio Playlist và Player Bar */
+const websiteVolumeControls = [
+  volume,
+  document.querySelector("[data-dock-volume]")
+].filter(Boolean);
+
+let websiteAudioContext = null;
+let websiteMediaSource = null;
+let websiteGainNode = null;
+
+/* Khởi tạo Web Audio */
+const initializeWebsiteVolume = async () => {
+  if (!websiteAudioContext) {
+    const AudioContextClass =
+      window.AudioContext || window.webkitAudioContext;
+
+    if (!AudioContextClass) {
+      return null;
+    }
+
+    websiteAudioContext = new AudioContextClass();
+
+    /*
+     * Chỉ được tạo MediaElementSource một lần
+     * cho cùng một thẻ audio.
+     */
+    websiteMediaSource =
+      websiteAudioContext.createMediaElementSource(audio);
+
+    websiteGainNode = websiteAudioContext.createGain();
+
+    websiteMediaSource.connect(websiteGainNode);
+    websiteGainNode.connect(websiteAudioContext.destination);
+
+    /*
+     * Giữ volume gốc của thẻ audio ở mức tối đa.
+     * GainNode sẽ đảm nhiệm việc tăng giảm âm lượng.
+     */
+    audio.volume = 1;
+
+    const initialVolume = Number(
+      websiteVolumeControls[0]?.value ?? 0.82
+    );
+
+    websiteGainNode.gain.setValueAtTime(
+      initialVolume,
+      websiteAudioContext.currentTime
+    );
+  }
+
+  /*
+   * Safari thường để AudioContext ở trạng thái suspended
+   * cho tới khi người dùng chạm vào màn hình.
+   */
+  if (websiteAudioContext.state === "suspended") {
+    await websiteAudioContext.resume();
+  }
+
+  return websiteGainNode;
+};
+
+/* Thay đổi âm lượng */
+const setWebsiteVolume = async (newValue) => {
+  const safeVolume = Math.max(
+    0,
+    Math.min(1, Number(newValue))
+  );
+
+  try {
+    const gainNode = await initializeWebsiteVolume();
+
+    if (gainNode && websiteAudioContext) {
+      gainNode.gain.cancelScheduledValues(
+        websiteAudioContext.currentTime
+      );
+
+      gainNode.gain.setTargetAtTime(
+        safeVolume,
+        websiteAudioContext.currentTime,
+        0.015
+      );
+    } else {
+      /*
+       * Dự phòng cho trình duyệt không có Web Audio API.
+       */
+      audio.volume = safeVolume;
+    }
+  } catch (error) {
+    console.warn(
+      "Không thể khởi tạo Web Audio, dùng volume mặc định:",
+      error
+    );
+
+    audio.volume = safeVolume;
+  }
+
+  /*
+   * Đồng bộ thanh âm lượng của Audio Playlist
+   * và thanh Player Bar.
+   */
+  websiteVolumeControls.forEach((control) => {
+    if (control !== document.activeElement) {
+      control.value = String(safeVolume);
+    }
+  });
+};
+
+/* Gắn sự kiện cho tất cả thanh âm lượng */
+websiteVolumeControls.forEach((control) => {
+  control.addEventListener(
+    "pointerdown",
+    () => {
+      void initializeWebsiteVolume();
+    },
+    { once: true }
+  );
+
+  control.addEventListener(
+    "touchstart",
+    () => {
+      void initializeWebsiteVolume();
+    },
+    {
+      once: true,
+      passive: true
+    }
+  );
+
+  control.addEventListener("input", (event) => {
+    void setWebsiteVolume(event.currentTarget.value);
+  });
+
+  control.addEventListener("change", (event) => {
+    void setWebsiteVolume(event.currentTarget.value);
+  });
+});
 
       audio.addEventListener("loadstart", () => {
         if (status) status.textContent = "LOADING AUDIO";
@@ -10412,7 +10568,7 @@ document.querySelectorAll(".section,.hero").forEach(el=>{
         await selectAndPlay(index);
       });
 
-      audio.volume = volume ? Number(volume.value) : 0.82;
+audio.volume = 1;
 
       // Load the first track without autoplay.
       loadTrack(0);
@@ -10592,9 +10748,6 @@ document.querySelectorAll(".section,.hero").forEach(el=>{
     updatePlayerBar();
   });
 
-  volumeInput?.addEventListener("input", () => {
-    audio.volume = Number(volumeInput.value);
-  });
 
   hideButton?.addEventListener("click", () => {
     playerBar.classList.add("is-hidden");
