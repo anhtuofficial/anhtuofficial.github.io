@@ -9213,6 +9213,185 @@ body *:not(.hero__image)::after{
 
   <div class="modal" id="videoModal" aria-hidden="true"><button class="modal__backdrop" data-close-video aria-label="Đóng"></button><div class="modal__panel"><button class="modal__close" data-close-video>×</button><div class="modal__video" id="videoFrame"></div></div></div>
   <div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox__backdrop" data-close-lightbox aria-label="Đóng"></button><figure><button class="lightbox__close" data-close-lightbox>×</button><img id="lightboxImage" src="" alt=""><figcaption id="lightboxCaption"></figcaption></figure></div>
+  
+  
+<!-- PLAYER BAR CỐ ĐỊNH -->
+<div class="audio-dock" data-sticky-player aria-label="Thanh điều khiển phát nhạc">
+  <button
+    class="audio-dock__hide"
+    type="button"
+    data-dock-hide
+    aria-label="Ẩn thanh phát nhạc"
+    title="Ẩn thanh phát nhạc">
+
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="m6 9 6 6 6-6"/>
+    </svg>
+  </button>
+
+  <!-- Thông tin bài hát -->
+  <div class="audio-dock__meta">
+    <img
+      src="images/audio-track-01.JPG"
+      alt="Ảnh bài hát đang phát"
+      data-dock-cover>
+
+    <div class="audio-dock__meta-copy">
+      <small>NOW PLAYING</small>
+      <strong data-dock-title>Chỉ Còn Tình Yêu</strong>
+      <span data-dock-artist>Anh Tư • Official Audio</span>
+    </div>
+  </div>
+
+  <!-- Điều khiển trung tâm -->
+  <div class="audio-dock__center">
+    <div class="audio-dock__controls">
+      <!-- Bài trước -->
+      <button
+        type="button"
+        class="audio-dock__control"
+        data-dock-previous
+        aria-label="Bài hát trước"
+        title="Bài hát trước">
+
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 5v14"/>
+          <path d="m18 6-10 6 10 6V6Z" fill="currentColor"/>
+        </svg>
+      </button>
+
+      <!-- Lùi 10 giây -->
+      <button
+        type="button"
+        class="audio-dock__control"
+        data-dock-backward
+        aria-label="Lùi 10 giây"
+        title="Lùi 10 giây">
+
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M7 8H3V4"/>
+          <path d="M4 8a8.5 8.5 0 1 1-.2 8"/>
+          <text
+            x="12"
+            y="15"
+            text-anchor="middle"
+            font-size="7"
+            font-weight="700"
+            fill="currentColor"
+            stroke="none">10</text>
+        </svg>
+      </button>
+
+      <!-- Phát / tạm dừng -->
+      <button
+        type="button"
+        class="audio-dock__play"
+        data-dock-toggle
+        aria-label="Phát nhạc"
+        title="Phát hoặc tạm dừng">
+
+        <span class="audio-dock__play-symbol audio-dock__play-symbol--play">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="m8 6 10 6-10 6V6Z" fill="currentColor"/>
+          </svg>
+        </span>
+
+        <span class="audio-dock__play-symbol audio-dock__play-symbol--pause">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="7" y="5.5" width="3.5" height="13" rx="1" fill="currentColor"/>
+            <rect x="13.5" y="5.5" width="3.5" height="13" rx="1" fill="currentColor"/>
+          </svg>
+        </span>
+      </button>
+
+      <!-- Tiến 10 giây -->
+      <button
+        type="button"
+        class="audio-dock__control"
+        data-dock-forward
+        aria-label="Tiến 10 giây"
+        title="Tiến 10 giây">
+
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M17 8h4V4"/>
+          <path d="M20 8a8.5 8.5 0 1 0 .2 8"/>
+          <text
+            x="12"
+            y="15"
+            text-anchor="middle"
+            font-size="7"
+            font-weight="700"
+            fill="currentColor"
+            stroke="none">10</text>
+        </svg>
+      </button>
+
+      <!-- Bài tiếp theo -->
+      <button
+        type="button"
+        class="audio-dock__control"
+        data-dock-next
+        aria-label="Bài hát tiếp theo"
+        title="Bài hát tiếp theo">
+
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M18 5v14"/>
+          <path d="m6 6 10 6-10 6V6Z" fill="currentColor"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Tiến trình bài hát -->
+    <div class="audio-dock__progress">
+      <span data-dock-current>00:00</span>
+
+      <input
+        type="range"
+        min="0"
+        max="100"
+        value="0"
+        step="0.1"
+        data-dock-seek
+        aria-label="Tiến trình bài hát">
+
+      <span data-dock-duration>00:00</span>
+    </div>
+  </div>
+
+  <!-- Âm lượng -->
+  <div class="audio-dock__volume">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M4 10v4h4l5 4V6l-5 4H4Z"/>
+      <path d="M17 9a4.5 4.5 0 0 1 0 6"/>
+      <path d="M19.5 6.5a8 8 0 0 1 0 11"/>
+    </svg>
+
+    <input
+      type="range"
+      min="0"
+      max="1"
+      value="0.82"
+      step="0.01"
+      data-dock-volume
+      aria-label="Âm lượng">
+  </div>
+</div>
+
+<!-- Nút mở lại khi player bar bị ẩn -->
+<button
+  class="audio-dock-show"
+  type="button"
+  data-dock-show
+  aria-label="Hiện thanh phát nhạc"
+  title="Hiện thanh phát nhạc"
+  hidden>
+
+  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path d="m6 15 6-6 6 6"/>
+  </svg>
+
+  <span>PLAYER</span>
+</button>
   <script>
 
 (() => {
@@ -10473,183 +10652,5 @@ document.querySelectorAll(".section,.hero").forEach(el=>{
 })();
 
 </script>
-
-<!-- PLAYER BAR CỐ ĐỊNH -->
-<div class="audio-dock" data-sticky-player aria-label="Thanh điều khiển phát nhạc">
-  <button
-    class="audio-dock__hide"
-    type="button"
-    data-dock-hide
-    aria-label="Ẩn thanh phát nhạc"
-    title="Ẩn thanh phát nhạc">
-
-    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="m6 9 6 6 6-6"/>
-    </svg>
-  </button>
-
-  <!-- Thông tin bài hát -->
-  <div class="audio-dock__meta">
-    <img
-      src="images/audio-track-01.JPG"
-      alt="Ảnh bài hát đang phát"
-      data-dock-cover>
-
-    <div class="audio-dock__meta-copy">
-      <small>NOW PLAYING</small>
-      <strong data-dock-title>Chỉ Còn Tình Yêu</strong>
-      <span data-dock-artist>Anh Tư • Official Audio</span>
-    </div>
-  </div>
-
-  <!-- Điều khiển trung tâm -->
-  <div class="audio-dock__center">
-    <div class="audio-dock__controls">
-      <!-- Bài trước -->
-      <button
-        type="button"
-        class="audio-dock__control"
-        data-dock-previous
-        aria-label="Bài hát trước"
-        title="Bài hát trước">
-
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M6 5v14"/>
-          <path d="m18 6-10 6 10 6V6Z" fill="currentColor"/>
-        </svg>
-      </button>
-
-      <!-- Lùi 10 giây -->
-      <button
-        type="button"
-        class="audio-dock__control"
-        data-dock-backward
-        aria-label="Lùi 10 giây"
-        title="Lùi 10 giây">
-
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M7 8H3V4"/>
-          <path d="M4 8a8.5 8.5 0 1 1-.2 8"/>
-          <text
-            x="12"
-            y="15"
-            text-anchor="middle"
-            font-size="7"
-            font-weight="700"
-            fill="currentColor"
-            stroke="none">10</text>
-        </svg>
-      </button>
-
-      <!-- Phát / tạm dừng -->
-      <button
-        type="button"
-        class="audio-dock__play"
-        data-dock-toggle
-        aria-label="Phát nhạc"
-        title="Phát hoặc tạm dừng">
-
-        <span class="audio-dock__play-symbol audio-dock__play-symbol--play">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="m8 6 10 6-10 6V6Z" fill="currentColor"/>
-          </svg>
-        </span>
-
-        <span class="audio-dock__play-symbol audio-dock__play-symbol--pause">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <rect x="7" y="5.5" width="3.5" height="13" rx="1" fill="currentColor"/>
-            <rect x="13.5" y="5.5" width="3.5" height="13" rx="1" fill="currentColor"/>
-          </svg>
-        </span>
-      </button>
-
-      <!-- Tiến 10 giây -->
-      <button
-        type="button"
-        class="audio-dock__control"
-        data-dock-forward
-        aria-label="Tiến 10 giây"
-        title="Tiến 10 giây">
-
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M17 8h4V4"/>
-          <path d="M20 8a8.5 8.5 0 1 0 .2 8"/>
-          <text
-            x="12"
-            y="15"
-            text-anchor="middle"
-            font-size="7"
-            font-weight="700"
-            fill="currentColor"
-            stroke="none">10</text>
-        </svg>
-      </button>
-
-      <!-- Bài tiếp theo -->
-      <button
-        type="button"
-        class="audio-dock__control"
-        data-dock-next
-        aria-label="Bài hát tiếp theo"
-        title="Bài hát tiếp theo">
-
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M18 5v14"/>
-          <path d="m6 6 10 6-10 6V6Z" fill="currentColor"/>
-        </svg>
-      </button>
-    </div>
-
-    <!-- Tiến trình bài hát -->
-    <div class="audio-dock__progress">
-      <span data-dock-current>00:00</span>
-
-      <input
-        type="range"
-        min="0"
-        max="100"
-        value="0"
-        step="0.1"
-        data-dock-seek
-        aria-label="Tiến trình bài hát">
-
-      <span data-dock-duration>00:00</span>
-    </div>
-  </div>
-
-  <!-- Âm lượng -->
-  <div class="audio-dock__volume">
-    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M4 10v4h4l5 4V6l-5 4H4Z"/>
-      <path d="M17 9a4.5 4.5 0 0 1 0 6"/>
-      <path d="M19.5 6.5a8 8 0 0 1 0 11"/>
-    </svg>
-
-    <input
-      type="range"
-      min="0"
-      max="1"
-      value="0.82"
-      step="0.01"
-      data-dock-volume
-      aria-label="Âm lượng">
-  </div>
-</div>
-
-<!-- Nút mở lại khi player bar bị ẩn -->
-<button
-  class="audio-dock-show"
-  type="button"
-  data-dock-show
-  aria-label="Hiện thanh phát nhạc"
-  title="Hiện thanh phát nhạc"
-  hidden>
-
-  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path d="m6 15 6-6 6 6"/>
-  </svg>
-
-  <span>PLAYER</span>
-</button>
 </body>
 </html>
