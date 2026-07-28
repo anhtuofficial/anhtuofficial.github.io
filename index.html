@@ -8190,6 +8190,21 @@ body *:not(.hero__image)::after{
     height: 43px;
   }
 }
+
+/* Tránh đè lên nút cuộn lên đầu trang */
+.audio-dock-show {
+  left: 18px !important;
+  right: auto !important;
+  bottom: 18px !important;
+}
+
+@media (max-width: 700px) {
+  .audio-dock-show {
+    left: 10px !important;
+    right: auto !important;
+    bottom: 10px !important;
+  }
+}
 </style>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
